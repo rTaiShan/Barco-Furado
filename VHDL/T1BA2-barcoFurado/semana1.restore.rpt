@@ -1,0 +1,96 @@
+Restore Archived Project report for semana1
+Mon Nov 06 08:21:44 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon Nov 06 08:21:44 2023 ;
+; Revision Name                   ; semana1                               ;
+; Top-level Entity Name           ; circuito_wrapper                      ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BB3-barcoFurado.qar' into the 'C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/' directory
+Info: Generated report 'semana1.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Mon Nov 06 08:21:44 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++--------------------------+
+; Files Restored           ;
++--------------------------+
+; File Name                ;
++--------------------------+
+; qar_info.json            ;
+; assignment_defaults.qdf  ;
+; busca_buracos.vhd        ;
+; circuito_semana_1.vhd    ;
+; circuito_wrapper.vhd     ;
+; clock_div.vhd            ;
+; contador_3000.vhd        ;
+; contador_custom.vhd      ;
+; contador_dificuldade.vhd ;
+; contador_m.vhd           ;
+; dataflow.vhd             ;
+; gera_buracos.vhd         ;
+; gera_buracos_df.vhd      ;
+; gera_buracos_uc.vhd      ;
+; hexa7seg.vhd             ;
+; move_buraco.vhd          ;
+; registrador_n.vhd        ;
+; semana1.qpf              ;
+; semana1.qsf              ;
+; unidade_controle.vhd     ;
+; wrapper_df.vhd           ;
+; wrapper_uc.vhd           ;
++--------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

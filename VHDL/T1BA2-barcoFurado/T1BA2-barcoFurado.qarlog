@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/T1BA2-barcoFurado.qarlog
+
+Archive:	C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/T1BA2-barcoFurado.qar
+Date:		Mon Nov 06 10:33:51 2023
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/assignment_defaults.qdf
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/busca_buracos.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_wrapper.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/clock_div.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_3000.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_dificuldade.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_m.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_m_n.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/gera_buracos.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/gera_buracos_df.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/gera_buracos_uc.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/hexa7seg.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/move_buraco.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/registrador_n.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/semana1.qpf
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/semana1.qsf
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/unidade_controle.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/wrapper_df.vhd
+C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/wrapper_uc.vhd
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
