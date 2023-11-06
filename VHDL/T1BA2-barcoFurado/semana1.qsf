@@ -61,8 +61,8 @@ set_location_assignment PIN_U16 -to db_estado[3]
 set_location_assignment PIN_U15 -to db_estado[4]
 set_location_assignment PIN_Y15 -to db_estado[5]
 set_location_assignment PIN_P9 -to db_estado[6]
-set_location_assignment PIN_J18 -to dificuldade[0]
-set_location_assignment PIN_G11 -to dificuldade[1]
+set_location_assignment PIN_T13 -to dificuldade[0]
+set_location_assignment PIN_T12 -to dificuldade[1]
 set_location_assignment PIN_U13 -to reset
 set_location_assignment PIN_AA20 -to nivel_agua_0[0]
 set_location_assignment PIN_AB20 -to nivel_agua_0[1]
@@ -82,13 +82,13 @@ set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_G17 -to jogar
-set_location_assignment PIN_C13 -to vitoria_led
-set_location_assignment PIN_A13 -to derrota_led
-set_location_assignment PIN_H18 -to buracos_led[0]
-set_location_assignment PIN_J19 -to buracos_led[1]
-set_location_assignment PIN_H10 -to buracos_led[2]
-set_location_assignment PIN_H14 -to buracos_led[3]
+set_location_assignment PIN_V13 -to jogar
+set_location_assignment PIN_Y3 -to vitoria_led
+set_location_assignment PIN_W2 -to derrota_led
+set_location_assignment PIN_N2 -to buracos_led[0]
+set_location_assignment PIN_N1 -to buracos_led[1]
+set_location_assignment PIN_U2 -to buracos_led[2]
+set_location_assignment PIN_U1 -to buracos_led[3]
 set_global_assignment -name VHDL_FILE circuito_semana_1.vhd
 set_global_assignment -name VHDL_FILE hexa7seg.vhd
 set_global_assignment -name VHDL_FILE contador_m.vhd
