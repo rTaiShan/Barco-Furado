@@ -1,0 +1,48 @@
+entity controle_buraco is
+  port (
+    clock : in std_logic;
+    reset : in std_logic;
+    buracos_in : in std_logic_vector(3 downto 0);
+    buracos_pwm : out std_logic_vector(3 downto 0);
+  );
+end entity;
+
+architecture behavioral of controle_buraco is
+
+  component circuito_pwm_generic is
+    generic (
+      -- 8 configuracoes de largura
+      conf_periodo : integer := 1000000; -- 20ms
+      conf_posicoes : integer := 100;
+      conf_largura_posicao : integer := 250; -- conf_posicoes * conf_largura_posicao + largura_min = largura_max
+      largura_min : integer := 75000; -- 1.5ms, 0 deg
+      largura_max : integer := 100000 -- 2ms, 90 deg
+    );
+    port (
+      clock : in std_logic;
+      reset : in std_logic;
+      largura : in std_logic_vector(natural(ceil(log2(real(conf_posicoes)))) downto 0);
+      pwm : out std_logic
+    );
+  end component;
+
+  component contador_custom is generic (
+    constant maxM : integer := 256 -- modulo maximo do contador
+    );
+    port (
+      clock : in std_logic;
+      zera_as : in std_logic;
+      zera_s : in std_logic;
+      incrementa_1 : in std_logic;
+      incrementa_2 : in std_logic;
+      decrementa : in std_logic;
+      dificuldade : in std_logic_vector(1 downto 0);
+      Q : out std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
+      nivel_agua_0 : out std_logic_vector(3 downto 0);
+      nivel_agua_1 : out std_logic_vector(3 downto 0);
+      fim : out std_logic
+    );
+  end component contador_custom;
+begin
+
+end architecture;

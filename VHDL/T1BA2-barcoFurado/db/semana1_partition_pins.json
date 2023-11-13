@@ -20,6 +20,26 @@
 					"strict" : false
 				},
 				{
+					"name" : "buracos_pwm[0]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_pwm[1]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_pwm[2]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_pwm[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vitoria_led",
+					"strict" : false
+				},
+				{
 					"name" : "derrota_led",
 					"strict" : false
 				},
@@ -120,11 +140,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "botoes[3]",
+					"name" : "botoes[2]",
 					"strict" : false
 				},
 				{
-					"name" : "botoes[2]",
+					"name" : "botoes[3]",
 					"strict" : false
 				},
 				{

@@ -24,8 +24,8 @@ entity circuito_semana_1 is
 		db_buracos		  : in std_logic;
 		pronto           : out std_logic;
 		vitoria          : out std_logic;
-	        derrota          : out std_logic;
-	        leds	         : out std_logic_vector(3 downto 0);
+	   derrota          : out std_logic;
+	   leds	         : out std_logic_vector(3 downto 0);
 		nivel_agua_0	 : out std_logic_vector(6 downto 0);
 		nivel_agua_1	 : out std_logic_vector(6 downto 0);
 		db_estado        : out std_logic_vector(6 downto 0);
@@ -113,6 +113,7 @@ begin
 	led_externo <= s_buracos;
 	db_clock <= clock;
 	s_botoes <= not(botoes);
+	--s_botoes <= (botoes); -- depuração duração do jogo
 
 	HEX_Estado : hexa7seg 
 		port map(

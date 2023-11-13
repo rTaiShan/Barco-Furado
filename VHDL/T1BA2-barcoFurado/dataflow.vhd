@@ -43,7 +43,7 @@ end entity dataflow;
 
 architecture comportamental of dataflow is
 	signal s_buracos, s_gera_buracos : std_logic_vector(3 downto 0);
-	signal s_pulse: std_logic;
+	signal s_tick: std_logic;
 
 	component busca_buracos is 
 		port(
@@ -127,12 +127,15 @@ begin
 			--    M => 60000,
 			-- N => 16
 			-- clock 50Mhz
-			--	M => 500000000  -- Versão de debug (10 segundos)
-			M => 3000000000,
-			N => 32
+			--M => 500000000,  -- Versão de debug (10 segundos)
+			--M => 3000000000,
+			--N => 33
+			--M => 625,  -- Versão de debug tick - período de 32 ms (10 segundos)
+			M => 3750, -- período de 32 ms (1 minuto)
+			N => 12
 			)
 		port map(
-			clock   => clock,
+			clock   => s_tick,
 			zera_as => zera_tempo, 
 			zera_s  => '0', 
 			conta   => '1',
@@ -141,7 +144,7 @@ begin
 			meio    => open
 		);
 
-	PULSE_GENERATOR: contador_m
+	TICK_GENERATOR: contador_m
 	    generic map(
 			-- M => 32 -- A cada 32 ciclos do clock (1khz -> 32ms) incrementa agua
 			M => 1600000 -- A cada 1600000 (=32 * 50000000 / 1000) ciclos do clock (50Mhz -> 32ms) incrementa agua
@@ -152,7 +155,7 @@ begin
 			zera_s  => '0',
 			conta   => '1',
 			Q       => open,
-			fim     => s_pulse,
+			fim     => s_tick,
 			meio    => open
 		);
 		
@@ -161,7 +164,7 @@ begin
 			maxM => 256
 		)
 		port map(
-			clock => s_pulse,
+			clock => s_tick,
 			zera_as => zera_agua,
 			zera_s => '0',
 			incrementa_1 => incrementa_1,

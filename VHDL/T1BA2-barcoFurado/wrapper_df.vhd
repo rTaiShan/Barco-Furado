@@ -14,6 +14,7 @@ entity wrapper_df is
 		led_select    : in  std_logic;
 		
 		buracos_led  : out std_logic_vector(3 downto 0);
+		buracos_pwm  : out std_logic_vector(3 downto 0);
 		vitoria_led  : out std_logic;
 		derrota_led  : out std_logic;
 		
@@ -31,7 +32,7 @@ architecture comportamental of wrapper_df is
 signal s_leds_contagem : std_logic_vector(3 downto 0);
 signal s_led_derrota_contagem : std_logic; 
 signal s_dificuldade   : std_logic_vector(1 downto 0);
-signal s_buracos, s_buracos_led : std_logic_vector(3 downto 0);
+signal s_buracos, s_buracos_led, s_buracos_externos : std_logic_vector(3 downto 0);
 signal s_vitoria, s_derrota : std_logic;
 
 
@@ -67,6 +68,15 @@ component circuito_semana_1 is
 		db_clock	        : out std_logic;
 		led_externo   	  : out std_logic_Vector(3 downto 0)
 	);
+end component;
+
+component controle_buraco is
+  port (
+	 clock : in std_logic;
+	 reset : in std_logic;
+	 buracos_in : in std_logic_vector(3 downto 0);
+	 buracos_pwm : out std_logic_vector(3 downto 0)
+  );
 end component;
 
 begin
@@ -118,7 +128,16 @@ circuito_principal : circuito_semana_1
 		nivel_agua_1 => nivel_agua_1,
 		db_estado => db_estado,
 		db_clock	=> db_clock,
-		led_externo => open
+		led_externo => s_buracos_externos
 	);
+	
+controle_buraco_pwm : controle_buraco
+  port map (
+	 clock => clock,
+	 reset => reset,
+	 buracos_in => s_buracos_externos,
+	 buracos_pwm => buracos_pwm
+  );
+
 
 end comportamental;

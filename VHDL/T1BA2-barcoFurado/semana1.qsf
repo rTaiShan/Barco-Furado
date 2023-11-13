@@ -72,7 +72,7 @@ set_location_assignment PIN_AB18 -to nivel_agua_0[4]
 set_location_assignment PIN_AA17 -to nivel_agua_0[5]
 set_location_assignment PIN_U22 -to nivel_agua_0[6]
 set_location_assignment PIN_U21 -to nivel_agua_1[0]
-set_location_assignment PIN_AB13 -to nivel_agua_1[1]
+set_location_assignment PIN_V21 -to nivel_agua_1[1]
 set_location_assignment PIN_W22 -to nivel_agua_1[2]
 set_location_assignment PIN_W21 -to nivel_agua_1[3]
 set_location_assignment PIN_Y22 -to nivel_agua_1[4]
@@ -89,6 +89,7 @@ set_location_assignment PIN_N2 -to buracos_led[0]
 set_location_assignment PIN_N1 -to buracos_led[1]
 set_location_assignment PIN_U2 -to buracos_led[2]
 set_location_assignment PIN_U1 -to buracos_led[3]
+set_location_assignment PIN_M9 -to clock
 set_global_assignment -name VHDL_FILE circuito_semana_1.vhd
 set_global_assignment -name VHDL_FILE hexa7seg.vhd
 set_global_assignment -name VHDL_FILE contador_m.vhd
@@ -107,5 +108,10 @@ set_global_assignment -name VHDL_FILE contador_3000.vhd
 set_global_assignment -name VHDL_FILE wrapper_uc.vhd
 set_global_assignment -name VHDL_FILE contador_dificuldade.vhd
 set_global_assignment -name VHDL_FILE clock_div.vhd
-set_location_assignment PIN_M9 -to clock
+set_global_assignment -name VHDL_FILE circuito_pwm_generic.vhd
+set_global_assignment -name VHDL_FILE controle_buraco.vhd
+set_location_assignment PIN_K16 -to buracos_pwm[3]
+set_location_assignment PIN_G12 -to buracos_pwm[2]
+set_location_assignment PIN_G15 -to buracos_pwm[1]
+set_location_assignment PIN_F12 -to buracos_pwm[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

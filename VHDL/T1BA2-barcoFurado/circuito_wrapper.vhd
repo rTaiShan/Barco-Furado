@@ -11,6 +11,7 @@ entity circuito_wrapper is
 		dificuldade : in std_logic_vector(1 downto 0);
 		reset : in std_logic;
 		buracos_led : out std_logic_vector(3 downto 0);
+		buracos_pwm  : out std_logic_vector(3 downto 0);
 		vitoria_led : out std_logic;
 		derrota_led : out std_logic;
 		db_estado : out std_logic_vector(6 downto 0);
@@ -22,6 +23,7 @@ end entity;
 architecture comportamental of circuito_wrapper is
 
 	signal s_reseta_jogo, s_inicia_jogo, s_conta_regressivo, s_zera_contagem, s_led_select, s_fim_contagem, s_pronto : std_logic;
+	signal s_reseta_dataflow: std_logic;
 
 	component wrapper_uc is
 		port (
@@ -51,6 +53,7 @@ architecture comportamental of circuito_wrapper is
 			led_select : in std_logic;
 
 			buracos_led : out std_logic_vector(3 downto 0);
+			buracos_pwm : out std_logic_vector(3 downto 0);
 			vitoria_led : out std_logic;
 			derrota_led : out std_logic;
 
@@ -62,13 +65,16 @@ architecture comportamental of circuito_wrapper is
 			nivel_agua_0, nivel_agua_1 : out std_logic_vector(6 downto 0)
 		);
 	end component;
+	
 begin
 
 	db_clock <= clock;
+	s_reseta_dataflow <= s_reseta_jogo OR reset;
+
 	df : wrapper_df
 	port map(
 		clock => clock,
-		reset => s_reseta_jogo,
+		reset => s_reseta_dataflow,
 		iniciar => s_inicia_jogo,
 		botoes => botoes,
 		dificuldade => dificuldade,
@@ -78,6 +84,7 @@ begin
 		led_select => s_led_select,
 
 		buracos_led => buracos_led,
+		buracos_pwm => buracos_pwm,
 		vitoria_led => vitoria_led,
 		derrota_led => derrota_led,
 
@@ -102,4 +109,5 @@ begin
 		conta_regressivo => s_conta_regressivo,
 		zera_contagem => s_zera_contagem
 	);
+	
 end architecture;

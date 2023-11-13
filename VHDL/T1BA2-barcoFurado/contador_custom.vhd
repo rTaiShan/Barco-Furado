@@ -73,7 +73,7 @@ begin
     s_Q <= std_logic_vector(to_unsigned(IQ, Q'length));
 	 Q <= s_Q;
 	 --TODO: Conversao para porcentagem e extracao de digitos
-	 nivel_agua_0 <= s_Q(7 downto 4);
-	 nivel_agua_1 <= s_Q(3 downto 0);
+	 nivel_agua_0 <= s_Q(7 downto 4) when s_Q'LENGTH >= 8 else "0000";
+	 nivel_agua_1 <= s_Q(3 downto 0) when s_Q'LENGTH >= 4 else "0000";
 
 end architecture comportamental;
