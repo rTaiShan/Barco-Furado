@@ -1,0 +1,81 @@
+-- controle_buraco_tb
+--------------------------------------------------------------------------
+-- Descricao : 
+--             testbench do componente controle_buraco
+--
+--------------------------------------------------------------------------
+-- Revisoes  :
+--     Data        Versao  Autor             Descricao
+--     12/11/2023  1.0     Raul Tai          Criacao
+-------------------------------------------------------------------------
+--
+--
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity controle_buraco_tb is
+end entity;
+
+architecture tb of controle_buraco_tb is
+
+  -- Componente a ser testado (Device Under Test -- DUT)
+  component controle_buraco is
+    port (
+      clock : in std_logic;
+      reset : in std_logic;
+      buracos_in : in std_logic_vector(3 downto 0);
+      buracos_pwm : out std_logic_vector(3 downto 0)
+    );
+  end component;
+
+  -- Declaração de sinais para conectar o componente a ser testado (DUT)
+  --   valores iniciais para fins de simulacao (GHDL ou ModelSim)
+  signal clock_in : std_logic := '0';
+  signal reset_in : std_logic := '0';
+  signal buracos_in : std_logic_vector(3 downto 0) := "0000";
+  signal sinal_pwm_out : std_logic_vector(3 downto 0) := "0000";
+  -- Configurações do clock
+  signal keep_simulating : std_logic := '0'; -- delimita o tempo de geração do clock
+  constant clockPeriod : time := 20 ns;
+
+begin
+  -- Gerador de clock: executa enquanto 'keep_simulating = 1', com o período
+  -- especificado. Quando keep_simulating=0, clock é interrompido, bem como a 
+  -- simulação de eventos
+  clock_in <= (not clock_in) and keep_simulating after clockPeriod/2;
+  -- Conecta DUT (Device Under Test)
+  dut : controle_buraco
+  port map(
+    clock => clock_in,
+    reset => reset_in,
+    buracos_in => buracos_in,
+    buracos_pwm => sinal_pwm_out
+  );
+
+  -- geracao dos sinais de entrada (estimulos)
+  stimulus : process is
+  begin
+
+    assert false report "Inicio da simulacao" severity note;
+    keep_simulating <= '1';
+
+    ---- inicio: reset ----------------
+    reset_in <= '1';
+    wait for 2 * clockPeriod;
+    reset_in <= '0';
+    wait for 2 * clockPeriod;
+
+    ---- casos de teste
+    -- 1 buraco
+    buracos_in <= "0001";
+    wait for 400 ms;
+    buracos_in <= "0000";
+    wait for 400 ms;
+
+    ---- final dos casos de teste  da simulacao
+    assert false report "Fim da simulacao" severity note;
+    keep_simulating <= '0';
+
+    wait; -- fim da simulação: aguarda indefinidamente
+  end process;
+end architecture;
