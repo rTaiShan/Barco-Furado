@@ -27,7 +27,7 @@ entity contador_custom is
         incrementa_2      : in  std_logic;
 	decrementa        : in  std_logic;
         dificuldade       : in  std_logic_vector(1 downto 0);
-        Q       	  : out std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
+        Q       	  : out std_logic_vector(natural(ceil(log2(real(maxM))))-1 downto 0);
         fim     	  : out std_logic
     );
 end entity contador_custom;
@@ -35,7 +35,7 @@ end entity contador_custom;
 architecture comportamental of contador_custom is
          signal IQ   	: integer range 0 to maxM;
 	 signal M 	: integer range 0 to maxM;
-	 signal s_Q 	: std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
+	 signal s_Q 	: std_logic_vector(natural(ceil(log2(real(maxM))))-1 downto 0);
 begin
 	 --Divisoes sao sintetizaveis??
 	 M <= 	maxM     when dificuldade = "00" else

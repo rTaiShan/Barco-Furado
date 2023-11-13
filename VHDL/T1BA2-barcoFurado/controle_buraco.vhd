@@ -25,7 +25,7 @@ architecture behavioral of controle_buraco is
     port (
       clock : in std_logic;
       reset : in std_logic;
-      largura : in std_logic_vector(natural(ceil(log2(real(conf_posicoes)))) downto 0);
+      largura : in std_logic_vector(natural(ceil(log2(real(conf_posicoes))))-1 downto 0);
       pwm : out std_logic
     );
   end component;
@@ -41,7 +41,7 @@ architecture behavioral of controle_buraco is
       incrementa_2 : in std_logic;
       decrementa : in std_logic;
       dificuldade : in std_logic_vector(1 downto 0);
-      Q : out std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
+      Q : out std_logic_vector(natural(ceil(log2(real(maxM))))-1 downto 0);
       fim : out std_logic
     );
   end component contador_custom;
@@ -62,7 +62,7 @@ architecture behavioral of controle_buraco is
 end component contador_m;
 
   signal s_incrementa, s_decrementa, s_fim : std_logic_vector(3 downto 0);
-  signal s_Q0, s_Q1, s_Q2, s_Q3 : std_logic_vector(4 downto 0);
+  signal s_Q0, s_Q1, s_Q2, s_Q3 : std_logic_vector(3 downto 0);
   signal s_tick_vector : std_logic_vector (3 downto 0);
   signal s_tick : std_logic;
 

@@ -31,7 +31,7 @@ entity circuito_pwm_generic is
   port (
     clock : in std_logic;
     reset : in std_logic;
-    largura : in std_logic_vector(natural(ceil(log2(real(conf_posicoes)))) downto 0);
+    largura : in std_logic_vector(natural(ceil(log2(real(conf_posicoes))))-1 downto 0);
     pwm : out std_logic
   );
 end entity;

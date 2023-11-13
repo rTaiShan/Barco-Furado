@@ -1,5 +1,5 @@
 Flow report for semana1
-Mon Nov 13 01:49:11 2023
+Mon Nov 13 11:14:05 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Nov 13 01:49:06 2023       ;
+; Flow Status                     ; Successful - Mon Nov 13 11:14:00 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; semana1                                     ;
 ; Top-level Entity Name           ; circuito_wrapper                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 378 / 18,480 ( 2 % )                        ;
-; Total registers                 ; 296                                         ;
+; Logic utilization (in ALMs)     ; 367 / 18,480 ( 2 % )                        ;
+; Total registers                 ; 292                                         ;
 ; Total pins                      ; 41 / 224 ( 18 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/13/2023 01:48:12 ;
+; Start date & time ; 11/13/2023 11:13:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; semana1             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name      ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 963349379119.169985089218260           ; --            ; --               ; --         ;
+; COMPILER_SIGNATURE_ID               ; 963349379119.169988478328364           ; --            ; --               ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --               ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --               ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --               ; --         ;
@@ -96,11 +96,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4868 MB             ; 00:00:16                           ;
-; Fitter               ; 00:00:41     ; 1.1                     ; 6480 MB             ; 00:02:02                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4827 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.5                     ; 5106 MB             ; 00:00:05                           ;
-; Total                ; 00:00:56     ; --                      ; --                  ; 00:02:26                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4861 MB             ; 00:00:17                           ;
+; Fitter               ; 00:00:42     ; 1.1                     ; 6483 MB             ; 00:01:54                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4827 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.5                     ; 5104 MB             ; 00:00:06                           ;
+; Total                ; 00:00:58     ; --                      ; --                  ; 00:02:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

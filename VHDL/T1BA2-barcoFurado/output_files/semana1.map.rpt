@@ -1,5 +1,5 @@
 Analysis & Synthesis report for semana1
-Mon Nov 13 01:48:20 2023
+Mon Nov 13 11:13:11 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -77,7 +77,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 13 01:48:20 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 13 11:13:11 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; semana1                                     ;
 ; Top-level Entity Name           ; circuito_wrapper                            ;
@@ -239,14 +239,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 385               ;
+; Estimate of Logic utilization (ALMs needed) ; 371               ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 659               ;
-;     -- 7 input functions                    ; 1                 ;
-;     -- 6 input functions                    ; 109               ;
-;     -- 5 input functions                    ; 71                ;
-;     -- 4 input functions                    ; 145               ;
-;     -- <=3 input functions                  ; 333               ;
+; Combinational ALUT usage for logic          ; 645               ;
+;     -- 7 input functions                    ; 4                 ;
+;     -- 6 input functions                    ; 91                ;
+;     -- 5 input functions                    ; 54                ;
+;     -- 4 input functions                    ; 171               ;
+;     -- <=3 input functions                  ; 325               ;
 ;                                             ;                   ;
 ; Dedicated logic registers                   ; 240               ;
 ;                                             ;                   ;
@@ -256,8 +256,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; s_reseta_dataflow ;
 ; Maximum fan-out                             ; 248               ;
-; Total fan-out                               ; 3290              ;
-; Average fan-out                             ; 3.35              ;
+; Total fan-out                               ; 3203              ;
+; Average fan-out                             ; 3.31              ;
 +---------------------------------------------+-------------------+
 
 
@@ -266,8 +266,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Entity Name            ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |circuito_wrapper                                     ; 659 (1)             ; 240 (0)                   ; 0                 ; 0          ; 41   ; 0            ; |circuito_wrapper                                                                                                                                          ; circuito_wrapper       ; work         ;
-;    |wrapper_df:df|                                    ; 653 (11)            ; 235 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df                                                                                                                            ; wrapper_df             ; work         ;
+; |circuito_wrapper                                     ; 645 (1)             ; 240 (0)                   ; 0                 ; 0          ; 41   ; 0            ; |circuito_wrapper                                                                                                                                          ; circuito_wrapper       ; work         ;
+;    |wrapper_df:df|                                    ; 639 (6)             ; 235 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df                                                                                                                            ; wrapper_df             ; work         ;
 ;       |circuito_semana_1:circuito_principal|          ; 190 (0)             ; 99 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal                                                                                       ; circuito_semana_1      ; work         ;
 ;          |dataflow:DF|                                ; 162 (0)             ; 94 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF                                                                           ; dataflow               ; work         ;
 ;             |busca_buracos:BUSCA_FUROS|               ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|busca_buracos:BUSCA_FUROS                                                 ; busca_buracos          ; work         ;
@@ -286,12 +286,12 @@ https://fpgasoftware.intel.com/eula.
 ;          |hexa7seg:HEX_Nivel_Agua_0|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Nivel_Agua_0                                                             ; hexa7seg               ; work         ;
 ;          |hexa7seg:HEX_Nivel_Agua_1|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Nivel_Agua_1                                                             ; hexa7seg               ; work         ;
 ;          |unidade_controle:UC|                        ; 9 (9)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC                                                                   ; unidade_controle       ; work         ;
-;       |contador_inicializacao:contagem_regressiva|    ; 63 (63)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|contador_inicializacao:contagem_regressiva                                                                                 ; contador_inicializacao ; work         ;
-;       |controle_buraco:controle_buraco_pwm|           ; 389 (8)             ; 108 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm                                                                                        ; controle_buraco        ; work         ;
-;          |circuito_pwm_generic:pwm_0|                 ; 106 (106)           ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0                                                             ; circuito_pwm_generic   ; work         ;
-;          |circuito_pwm_generic:pwm_1|                 ; 81 (81)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1                                                             ; circuito_pwm_generic   ; work         ;
-;          |circuito_pwm_generic:pwm_2|                 ; 81 (81)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2                                                             ; circuito_pwm_generic   ; work         ;
-;          |circuito_pwm_generic:pwm_3|                 ; 81 (81)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3                                                             ; circuito_pwm_generic   ; work         ;
+;       |contador_inicializacao:contagem_regressiva|    ; 64 (64)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|contador_inicializacao:contagem_regressiva                                                                                 ; contador_inicializacao ; work         ;
+;       |controle_buraco:controle_buraco_pwm|           ; 379 (8)             ; 108 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm                                                                                        ; controle_buraco        ; work         ;
+;          |circuito_pwm_generic:pwm_0|                 ; 105 (105)           ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0                                                             ; circuito_pwm_generic   ; work         ;
+;          |circuito_pwm_generic:pwm_1|                 ; 78 (78)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1                                                             ; circuito_pwm_generic   ; work         ;
+;          |circuito_pwm_generic:pwm_2|                 ; 78 (78)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2                                                             ; circuito_pwm_generic   ; work         ;
+;          |circuito_pwm_generic:pwm_3|                 ; 78 (78)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3                                                             ; circuito_pwm_generic   ; work         ;
 ;          |contador_custom:contador_0|                 ; 8 (8)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0                                                             ; contador_custom        ; work         ;
 ;          |contador_custom:contador_1|                 ; 8 (8)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1                                                             ; contador_custom        ; work         ;
 ;          |contador_custom:contador_2|                 ; 8 (8)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2                                                             ; contador_custom        ; work         ;
@@ -458,15 +458,15 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0|IQ[4]                                                      ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1|IQ[3]                                                      ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2|IQ[2]                                                      ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3|IQ[4]                                                      ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA|IQ[1]                                         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc|Eprox.inicial                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0|IQ[2]                                                      ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1|IQ[1]                                                      ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2|IQ[4]                                                      ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3|IQ[0]                                                      ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA|IQ[8]                                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc|Eprox.e_add                      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|move_buraco:movedor|s_del_pos[2] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_uc:uc|Eprox.joga                                                                                                                ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC|Eprox.inicial                                                    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC|Eprox.inicializa_elementos                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -649,56 +649,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3"               ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; zera_s       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; incrementa_2 ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dificuldade  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; nivel_agua_0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nivel_agua_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3" ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; zera_s       ; Input ; Info     ; Stuck at GND                                                           ;
+; incrementa_2 ; Input ; Info     ; Stuck at GND                                                           ;
+; dificuldade  ; Input ; Info     ; Stuck at GND                                                           ;
++--------------+-------+----------+------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2"               ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; zera_s       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; incrementa_2 ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dificuldade  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; nivel_agua_0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nivel_agua_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2" ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; zera_s       ; Input ; Info     ; Stuck at GND                                                           ;
+; incrementa_2 ; Input ; Info     ; Stuck at GND                                                           ;
+; dificuldade  ; Input ; Info     ; Stuck at GND                                                           ;
++--------------+-------+----------+------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1"               ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; zera_s       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; incrementa_2 ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dificuldade  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; nivel_agua_0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nivel_agua_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1" ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; zera_s       ; Input ; Info     ; Stuck at GND                                                           ;
+; incrementa_2 ; Input ; Info     ; Stuck at GND                                                           ;
+; dificuldade  ; Input ; Info     ; Stuck at GND                                                           ;
++--------------+-------+----------+------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0"               ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; zera_s       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; incrementa_2 ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dificuldade  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; nivel_agua_0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nivel_agua_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0" ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                ;
++--------------+-------+----------+------------------------------------------------------------------------+
+; zera_s       ; Input ; Info     ; Stuck at GND                                                           ;
+; incrementa_2 ; Input ; Info     ; Stuck at GND                                                           ;
+; dificuldade  ; Input ; Info     ; Stuck at GND                                                           ;
++--------------+-------+----------+------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -743,13 +735,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA" ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; zera_s      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dificuldade ; Input  ; Info     ; Stuck at GND                                                                        ;
-; q           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------+-------+----------+--------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                              ;
++-------------+-------+----------+--------------------------------------------------------------------------------------+
+; zera_s      ; Input ; Info     ; Stuck at GND                                                                         ;
+; dificuldade ; Input ; Info     ; Stuck at GND                                                                         ;
++-------------+-------+----------+--------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -815,23 +806,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 64                          ;
 ;     ENA CLR SCLR      ; 8                           ;
 ;     SCLR              ; 45                          ;
-; arriav_lcell_comb     ; 663                         ;
+; arriav_lcell_comb     ; 649                         ;
 ;     arith             ; 152                         ;
 ;         1 data inputs ; 152                         ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 510                         ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 493                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 96                          ;
-;         3 data inputs ; 85                          ;
-;         4 data inputs ; 145                         ;
-;         5 data inputs ; 71                          ;
-;         6 data inputs ; 109                         ;
+;         2 data inputs ; 91                          ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 171                         ;
+;         5 data inputs ; 54                          ;
+;         6 data inputs ; 91                          ;
 ; boundary_port         ; 41                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.23                        ;
+; Average LUT depth     ; 3.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -850,7 +841,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 13 01:48:12 2023
+    Info: Processing started: Mon Nov 13 11:13:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off semana1 -c semana1
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file circuito_semana_1.vhd
@@ -869,7 +860,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file busca_b
     Info (12022): Found design unit 1: busca_buracos-estrutural File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/busca_buracos.vhd Line: 26
     Info (12023): Found entity 1: busca_buracos File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/busca_buracos.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file contador_custom.vhd
-    Info (12022): Found design unit 1: contador_custom-comportamental File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 37
+    Info (12022): Found design unit 1: contador_custom-comportamental File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 35
     Info (12023): Found entity 1: contador_custom File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 18
 Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
     Info (12022): Found design unit 1: unidade_controle-comportamental File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/unidade_controle.vhd Line: 39
@@ -922,20 +913,20 @@ Info (12128): Elaborating entity "dataflow" for hierarchy "wrapper_df:df|circuit
 Warning (12125): Using design file contador_m_n.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: contador_m_n-comportamental File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_m_n.vhd Line: 49
     Info (12023): Found entity 1: contador_m_n File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_m_n.vhd Line: 33
-Info (12128): Elaborating entity "contador_m_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 123
-Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 147
-Info (12128): Elaborating entity "contador_custom" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 162
-Info (10041): Inferred latch for "M[0]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[1]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[2]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[3]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[4]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[5]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[6]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[7]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[8]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (12128): Elaborating entity "busca_buracos" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|busca_buracos:BUSCA_FUROS" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 180
-Info (12128): Elaborating entity "gera_buracos" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 189
+Info (12128): Elaborating entity "contador_m_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 122
+Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 146
+Info (12128): Elaborating entity "contador_custom" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 161
+Info (10041): Inferred latch for "M[0]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[1]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[2]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[3]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[4]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[5]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[6]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[7]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[8]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (12128): Elaborating entity "busca_buracos" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|busca_buracos:BUSCA_FUROS" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 181
+Info (12128): Elaborating entity "gera_buracos" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 190
 Info (12128): Elaborating entity "gera_buracos_df" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/gera_buracos.vhd Line: 68
 Info (12128): Elaborating entity "registrador_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|registrador_n:registrador" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/gera_buracos_df.vhd Line: 117
 Info (12128): Elaborating entity "contador_dificuldade" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_dificuldade:conta_buraco" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/gera_buracos_df.vhd Line: 130
@@ -945,20 +936,20 @@ Info (12128): Elaborating entity "move_buraco" for hierarchy "wrapper_df:df|circ
 Info (12128): Elaborating entity "gera_buracos_uc" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/gera_buracos.vhd Line: 83
 Info (12128): Elaborating entity "unidade_controle" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 160
 Info (12128): Elaborating entity "controle_buraco" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/wrapper_df.vhd Line: 134
-Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 76
-Info (12128): Elaborating entity "contador_custom" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 90
-Info (10041): Inferred latch for "M[0]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[1]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[2]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[3]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (10041): Inferred latch for "M[4]" at contador_custom.vhd(43) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Info (12128): Elaborating entity "circuito_pwm_generic" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 108
+Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 74
+Info (12128): Elaborating entity "contador_custom" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 88
+Info (10041): Inferred latch for "M[0]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[1]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[2]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[3]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (10041): Inferred latch for "M[4]" at contador_custom.vhd(41) File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Info (12128): Elaborating entity "circuito_pwm_generic" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 104
 Info (12128): Elaborating entity "wrapper_uc" for hierarchy "wrapper_uc:uc" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_wrapper.vhd Line: 99
-Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
-Warning (14025): LATCH primitive "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA|M[8]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 43
+Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Warning (14025): LATCH primitive "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0|M[4]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
+Warning (14025): LATCH primitive "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA|M[8]" is permanently disabled File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/contador_custom.vhd Line: 41
 Info (13000): Registers with preset signals will power-up high File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_pwm_generic.vhd Line: 63
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
@@ -1033,14 +1024,14 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[16] will power up to High File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_pwm_generic.vhd Line: 63
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 701 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 687 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 660 logic cells
+    Info (21061): Implemented 646 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Mon Nov 13 01:48:20 2023
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Mon Nov 13 11:13:11 2023
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
 
 

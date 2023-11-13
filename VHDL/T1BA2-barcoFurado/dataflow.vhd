@@ -68,7 +68,7 @@ architecture comportamental of dataflow is
 	    incrementa_2  : in  std_logic;
 	    decrementa    : in  std_logic;
 	    dificuldade   : in  std_logic_vector(1 downto 0);
-        Q       	  : out std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
+        Q       	  : out std_logic_vector(natural(ceil(log2(real(maxM))))-1 downto 0);
         fim     	  : out std_logic
     );
 	 end component;
