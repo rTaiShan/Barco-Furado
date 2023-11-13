@@ -42,8 +42,6 @@ architecture behavioral of controle_buraco is
       decrementa : in std_logic;
       dificuldade : in std_logic_vector(1 downto 0);
       Q : out std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
-      nivel_agua_0 : out std_logic_vector(3 downto 0);
-      nivel_agua_1 : out std_logic_vector(3 downto 0);
       fim : out std_logic
     );
   end component contador_custom;
@@ -100,8 +98,6 @@ begin
     decrementa => s_decrementa(0),
     dificuldade => "00",
     Q => s_Q0,
-    nivel_agua_0 => open,
-    nivel_agua_1 => open,
     fim => s_fim(0)
   );
 
@@ -126,8 +122,6 @@ begin
     decrementa => s_decrementa(1),
     dificuldade => "00",
     Q => s_Q1,
-    nivel_agua_0 => open,
-    nivel_agua_1 => open,
     fim => s_fim(1)
   );
 
@@ -152,8 +146,6 @@ begin
     decrementa => s_decrementa(2),
     dificuldade => "00",
     Q => s_Q2,
-    nivel_agua_0 => open,
-    nivel_agua_1 => open,
     fim => s_fim(2)
   );
 
@@ -178,8 +170,6 @@ begin
     decrementa => s_decrementa(3),
     dificuldade => "00",
     Q => s_Q3,
-    nivel_agua_0 => open,
-    nivel_agua_1 => open,
     fim => s_fim(3)
   );
 

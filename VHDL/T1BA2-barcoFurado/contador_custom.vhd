@@ -28,8 +28,6 @@ entity contador_custom is
 	decrementa        : in  std_logic;
         dificuldade       : in  std_logic_vector(1 downto 0);
         Q       	  : out std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
-	nivel_agua_0      : out std_logic_vector(3 downto 0);
-	nivel_agua_1      : out std_logic_vector(3 downto 0);
         fim     	  : out std_logic
     );
 end entity contador_custom;
@@ -71,9 +69,6 @@ begin
            '0';
 
     s_Q <= std_logic_vector(to_unsigned(IQ, Q'length));
-	 Q <= s_Q;
-	 --TODO: Conversao para porcentagem e extracao de digitos
-	 nivel_agua_0 <= s_Q(7 downto 4) when s_Q'LENGTH >= 8 else "0000";
-	 nivel_agua_1 <= s_Q(3 downto 0) when s_Q'LENGTH >= 4 else "0000";
+	Q <= s_Q;
 
 end architecture comportamental;

@@ -44,6 +44,7 @@ end entity dataflow;
 architecture comportamental of dataflow is
 	signal s_buracos, s_gera_buracos : std_logic_vector(3 downto 0);
 	signal s_tick: std_logic;
+	signal s_q_agua : std_logic_vector(7 downto 0);
 
 	component busca_buracos is 
 		port(
@@ -68,8 +69,6 @@ architecture comportamental of dataflow is
 	    decrementa    : in  std_logic;
 	    dificuldade   : in  std_logic_vector(1 downto 0);
         Q       	  : out std_logic_vector(natural(ceil(log2(real(maxM)))) downto 0);
-	    nivel_agua_0  : out std_logic_vector(3 downto 0);
-	    nivel_agua_1  : out std_logic_vector(3 downto 0);
         fim     	  : out std_logic
     );
 	 end component;
@@ -171,11 +170,13 @@ begin
 			incrementa_2 => incrementa_2,
 			decrementa  => decrementa,
 			dificuldade => "00",
-			Q => open,
-			nivel_agua_0 => nivel_agua_0,
-			nivel_agua_1 => nivel_agua_1,
+			Q => s_q_agua,
 			fim => fim_agua
 		);
+	
+	--TODO: Conversao para porcentagem e extracao de digitos
+	nivel_agua_0 <= s_q_agua(7 downto 4);
+	nivel_agua_1 <= s_q_agua(3 downto 0);
 		
 	BUSCA_FUROS : busca_buracos
 		port map(
