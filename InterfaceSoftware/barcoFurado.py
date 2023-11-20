@@ -13,6 +13,11 @@ def baloes(height_baloes):
     screen.blit(balao, (width/1.5, height_baloes))
 
 def nivel_agua():
+    # nivel_da_agua = data[23:24] (hex)
+    # 0x00 = 0% (0)
+    # 0xFF = 100% (255)
+    #####################################
+    # nivel_da_agua = int(data[23:24], 16)
     global nivel_da_agua
     buracos_abertos = 0
     for i in range(9, 13):
@@ -41,6 +46,9 @@ def display_score():
     else:
         percentage_color = 'red'
 
+    # current_time = data[19:21] (hex)
+    #####################################
+    # current_time = int(data[19:21], 16)
     current_time = int(pygame.time.get_ticks()/1000) - start_time
     if(current_time < 10):
         current_score += int((2-percentage/100)*(int(pygame.time.get_ticks()/13)*mode - start_score)/100)
@@ -103,6 +111,7 @@ def animacao_raio():
         raio_time = 0
     screen.blit(lightning, (lightning_x, -50))
 
+# J.V.D.d.b....B....T...A..\0
 def read_serial(serial_conn):
     global game_end, data
     ## Update condition
@@ -167,9 +176,9 @@ if serial_conn.is_open:
         print(e)
 
 pygame.init()
-sizes =  pygame.display.get_desktop_sizes()
-width = sizes[0][0]
-height = sizes[0][1]
+# sizes =  pygame.display.get_desktop_sizes()
+width = 1920
+height = 1080
 game_active = False
 game_end = False
 screen = pygame.display.set_mode((width/1.2, height/1.35))
@@ -286,7 +295,9 @@ while True:
             exit()
     
     if game_active: 
-        data[1] = '0'
+        data_list = list(data)
+        data_list[1] = '0'
+        data = ''.join(data_list)
         for i in range(14, 18):
             if(data[i] == '1'):
                 buraco_index[i - 14] = i - 14
