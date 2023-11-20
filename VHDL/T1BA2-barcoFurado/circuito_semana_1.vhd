@@ -31,7 +31,8 @@ entity circuito_semana_1 is
 		nivel_agua_1	 : out std_logic_vector(6 downto 0);
 		db_estado        : out std_logic_vector(6 downto 0);
 		db_clock	 : out std_logic;
-		led_externo   : out std_logic_vector(3 downto 0)
+		led_externo   : out std_logic_vector(3 downto 0);
+		saida_serial : out std_logic
 	);
 end entity;
 
@@ -53,6 +54,9 @@ architecture comportamental of circuito_semana_1 is
 	signal s_jogando		: std_logic;
 	signal s_botoes: std_logic_vector(3 downto 0);
 	signal s_buzzer_en: std_logic;
+	signal s_vitoria, s_derrota : std_logic;
+	signal s_contador_agua : std_logic_vector(7 downto 0);
+	signal s_contador_tempo : std_logic_vector(11 downto 0);
 	
 	component hexa7seg is 
 		port(
@@ -84,7 +88,9 @@ architecture comportamental of circuito_semana_1 is
 			fim_agua   	 : out std_logic;
 			nivel_agua_0	 : out std_logic_vector(3 downto 0);
 			nivel_agua_1	 : out std_logic_vector(3 downto 0);
-			fim_tempo	 : out std_logic
+			fim_tempo	 : out std_logic;
+			contador_agua : out std_logic_vector(7 downto 0);
+			contador_tempo : out std_logic_vector(11 downto 0)
 		);
 	end component;
 
@@ -112,6 +118,24 @@ architecture comportamental of circuito_semana_1 is
 			db_estado	  : out std_logic_vector(3 downto 0)
 		);
 	end component;
+	
+	component transmissor is
+	port (
+		clock : in std_logic;
+		reset : in std_logic;
+		jogar : in std_logic;
+		vitoria : in std_logic;
+		derrota : in std_logic;
+		dificuldade : in std_logic_vector(1 downto 0);
+		botoes : in std_logic_vector(3 downto 0);
+		buracos : in std_logic_vector(3 downto 0);
+		contador_tempo : in std_logic_vector(11 downto 0);
+		contador_agua : in std_logic_vector(7 downto 0);
+		saida_serial : out std_logic;
+		db_saida_serial : out std_logic;
+		fim_transmissao : out std_logic
+	);
+end component;
 
 begin
 	leds <= s_buracos;
@@ -161,7 +185,9 @@ begin
 			fim_agua => s_fim_agua,
 			nivel_agua_0 => s_nivel_agua_0,
 			nivel_agua_1 => s_nivel_agua_1,
-			fim_tempo => s_fim_tempo
+			fim_tempo => s_fim_tempo,
+			contador_agua => s_contador_agua,
+			contador_tempo => s_contador_tempo
 		);
 		
 	UC : unidade_controle
@@ -175,8 +201,8 @@ begin
 			fim_agua => s_fim_agua,
 			fim_tempo => s_fim_tempo,
 			pronto => pronto,
-			vitoria => vitoria,
-			derrota => derrota,
+			vitoria => s_vitoria,
+			derrota => s_derrota,
 			zera_agua => s_zera_agua,
 			decrementa => s_decrementa,
 			incrementa_1 => s_incrementa_1,
@@ -186,5 +212,22 @@ begin
 			buzzer_en => s_buzzer_en,
 			db_estado => s_estado
 		);
+		
+	TX : transmissor 
+	port map(
+		clock => clock,
+		reset => reset,
+		jogar => iniciar,
+		vitoria => s_vitoria,
+		derrota => s_derrota,
+		dificuldade => dificuldade,
+		botoes => s_botoes,
+		buracos => s_buracos,
+		contador_tempo => s_contador_tempo,
+		contador_agua => s_contador_agua,
+		saida_serial => saida_serial,
+		db_saida_serial => open,
+		fim_transmissao => open
+	);
 
 end architecture;

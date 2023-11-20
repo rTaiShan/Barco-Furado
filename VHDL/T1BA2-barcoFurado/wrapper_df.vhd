@@ -25,7 +25,8 @@ entity wrapper_df is
 		
 		db_estado    : out std_logic_vector(6 downto 0);
 		db_clock		 : out std_logic;
-		nivel_agua_0, nivel_agua_1 : out std_logic_vector(6 downto 0)
+		nivel_agua_0, nivel_agua_1 : out std_logic_vector(6 downto 0);
+		saida_serial : out std_logic
 	);
 end entity;
 
@@ -69,7 +70,8 @@ component circuito_semana_1 is
 		nivel_agua_1	 : out std_logic_vector(6 downto 0);
 		db_estado        : out std_logic_vector(6 downto 0);
 		db_clock	 : out std_logic;
-		led_externo   : out std_logic_vector(3 downto 0)
+		led_externo   : out std_logic_vector(3 downto 0);
+		saida_serial : out std_logic
 	);
 end component;
 
@@ -132,7 +134,8 @@ circuito_principal : circuito_semana_1
 		nivel_agua_1 => nivel_agua_1,
 		db_estado => db_estado,
 		db_clock	=> db_clock,
-		led_externo => s_buracos_externos
+		led_externo => s_buracos_externos,
+		saida_serial => saida_serial
 	);
 
 	

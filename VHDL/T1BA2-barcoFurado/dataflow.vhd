@@ -39,7 +39,9 @@ entity dataflow is
 		fim_agua   	     : out std_logic;
 		nivel_agua_0	 : out std_logic_vector(3 downto 0);
 		nivel_agua_1	 : out std_logic_vector(3 downto 0);
-		fim_tempo	     : out std_logic
+		fim_tempo	     : out std_logic;
+		contador_agua : out std_logic_vector(7 downto 0);
+		contador_tempo : out std_logic_vector(11 downto 0)
 	);
 end entity dataflow;
 
@@ -159,7 +161,7 @@ begin
 			zera_as => zera_tempo, 
 			zera_s  => '0', 
 			conta   => '1',
-			Q       => open,
+			Q       => contador_tempo,
 			fim     => fim_tempo, 
 			meio    => open
 		);
@@ -198,6 +200,7 @@ begin
 	--TODO: Conversao para porcentagem e extracao de digitos
 	nivel_agua_0 <= s_q_agua(7 downto 4);
 	nivel_agua_1 <= s_q_agua(3 downto 0);
+	contador_agua <= s_q_agua;
 		
 	BUSCA_FUROS : busca_buracos
 		port map(
@@ -248,4 +251,5 @@ begin
 			sound_on => s_pulso_buzzer_en,
 			sound_out => buzzer_i
 		);	
+	
 end architecture;
