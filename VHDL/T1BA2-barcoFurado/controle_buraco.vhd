@@ -62,18 +62,19 @@ architecture behavioral of controle_buraco is
 end component contador_m;
 
   signal s_incrementa, s_decrementa, s_fim : std_logic_vector(3 downto 0);
-  signal s_Q0, s_Q1, s_Q2, s_Q3 : std_logic_vector(3 downto 0);
+  signal s_Q0, s_Q1, s_Q2, s_Q3 : std_logic_vector(2 downto 0);
   signal s_tick_vector : std_logic_vector (3 downto 0);
   signal s_tick : std_logic;
 
 begin
-  s_tick_vector <= s_tick & s_tick & s_tick & s_tick;
+  s_tick_vector <= (others => s_tick);
   s_incrementa <= buracos_in and (not s_fim) and s_tick_vector;
   s_decrementa <= not buracos_in and s_tick_vector;
 
   tick_generator : contador_m
   generic map (
-        M => 1000000 -- modulo do contador
+        --M => 1000000 -- modulo do contador
+        M => 500000 -- half modulo do contador
     )
     port map (
         clock   => clock,
@@ -87,7 +88,7 @@ begin
 
   contador_0 : contador_custom
   generic map(
-    maxM => 16
+    maxM => 8
   )
   port map(
     clock => clock,
@@ -102,6 +103,12 @@ begin
   );
 
   pwm_0 : circuito_pwm_generic
+  generic map(
+    conf_posicoes => 8,
+    conf_largura_posicao => 9168,
+    largura_min => 62778,
+    largura_max => 136122
+  )
   port map(
     clock => clock,
     reset => reset,
@@ -111,7 +118,7 @@ begin
 
   contador_1 : contador_custom
   generic map(
-    maxM => 16
+    maxM => 8
   )
   port map(
     clock => clock,
@@ -126,6 +133,12 @@ begin
   );
 
   pwm_1 : circuito_pwm_generic
+  generic map(
+  conf_posicoes => 8,
+    conf_largura_posicao => 9168,
+    largura_min => 62778,
+    largura_max => 136122
+  )
   port map(
     clock => clock,
     reset => reset,
@@ -135,7 +148,7 @@ begin
 
   contador_2 : contador_custom
   generic map(
-    maxM => 16
+    maxM => 8
   )
   port map(
     clock => clock,
@@ -150,6 +163,12 @@ begin
   );
 
   pwm_2 : circuito_pwm_generic
+  generic map(
+  conf_posicoes => 8,
+    conf_largura_posicao => 9168,
+    largura_min => 62778,
+    largura_max => 136122
+  )
   port map(
     clock => clock,
     reset => reset,
@@ -159,7 +178,7 @@ begin
 
   contador_3 : contador_custom
   generic map(
-    maxM => 16
+    maxM => 8
   )
   port map(
     clock => clock,
@@ -174,6 +193,12 @@ begin
   );
 
   pwm_3 : circuito_pwm_generic
+  generic map(
+  conf_posicoes => 8,
+    conf_largura_posicao => 9168,
+    largura_min => 62778,
+    largura_max => 136122
+  )
   port map(
     clock => clock,
     reset => reset,

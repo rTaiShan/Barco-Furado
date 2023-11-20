@@ -32,6 +32,8 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
 
 entity registrador_n is
     generic (
@@ -42,7 +44,8 @@ entity registrador_n is
         clear  : in  std_logic;
         enable : in  std_logic;
         D      : in  std_logic_vector (N-1 downto 0);
-        Q      : out std_logic_vector (N-1 downto 0) 
+        Q      : out std_logic_vector (N-1 downto 0);
+        updated: out std_logic
     );
 end entity registrador_n;
 
@@ -52,10 +55,25 @@ begin
 
 process(clock, clear, enable, IQ)
     begin
-        if (clear = '1') then IQ <= (others => '0');
+        if (clear = '1') 
+            then
+                if unsigned(IQ) = 0 then
+                    updated <= '0';
+                else
+                    updated <= '1';
+                end if;
+                IQ <= (others => '0');
         elsif (clock'event and clock='1') then
-            if (enable='1') then IQ <= D; 
-            else IQ <= IQ;
+            if (enable='1') then 
+                if IQ = D then
+                    updated <= '0';
+                else
+                    updated <= '1';
+                end if;
+                IQ <= D; 
+            else 
+                IQ <= IQ;
+                updated <= '0';
             end if;
         end if;
         Q <= IQ;

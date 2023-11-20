@@ -30,6 +30,8 @@ entity dataflow is
 		incrementa_1	 : in  std_logic;
 		incrementa_2	 : in  std_logic;
 		zera_tempo	     : in  std_logic;
+		buzzer_en		 : in  std_logic;
+		buzzer_i		 : out std_logic;
 	   buracos          : out std_logic_vector(3 downto 0);
 		sem_buracos	     : out std_logic;
 		um_buraco	     : out std_logic;
@@ -43,8 +45,9 @@ end entity dataflow;
 
 architecture comportamental of dataflow is
 	signal s_buracos, s_gera_buracos : std_logic_vector(3 downto 0);
-	signal s_tick: std_logic;
+	signal s_tick, s_tick_2s: std_logic;
 	signal s_q_agua : std_logic_vector(7 downto 0);
+	signal s_pulso_buzzer_en : std_logic;
 
 	component busca_buracos is 
 		port(
@@ -112,7 +115,25 @@ architecture comportamental of dataflow is
 			dificuldade  : in  std_logic_vector(1 downto 0);
 			db_buracos_in: in  std_logic_vector(3 downto 0);
 			db_buracos   : in  std_logic; -- Quando ativo, buracos <= db_buracos_in
-			buracos		 : out std_logic_vector(3 downto 0)
+			buracos		 : out std_logic_vector(3 downto 0);
+			trocou_buraco : out std_logic
+		);
+	end component;
+
+	component gerador_sons is
+		port( 
+			clk : in std_logic;
+			sound_on : in std_logic;
+			sound_out : out std_logic 
+	 	);
+	end component;
+
+	component edge_detector is
+		port(
+			clock  : in  std_logic;
+			reset  : in  std_logic;
+			sinal  : in  std_logic;
+			pulso  : out std_logic
 		);
 	end component;
 
@@ -195,6 +216,36 @@ begin
 			dificuldade => dificuldade,
 			db_buracos_in => buracos_in,
 			db_buracos => db_buracos, -- Quando ativo, buracos <= db_buracos_in
-			buracos =>s_buracos
+			buracos =>s_buracos,
+			trocou_buraco => open
 		);
+
+	tick_generator_2s: contador_m
+		generic map(
+			M => 100000000 -- A cada 100000000 (=2 * 50000000) ciclos do clock (50Mhz -> 2s)
+		)	
+		port map(
+			clock   => clock,
+			zera_as => zera_tempo,
+			zera_s  => '0',
+			conta   => '1',
+			Q       => open,
+			fim     => s_tick_2s,
+			meio    => open
+		);
+
+	edge_detector_buzzer_en: edge_detector
+		port map(
+			clock => s_tick_2s,
+			reset => reset,
+			sinal => buzzer_en,
+			pulso => s_pulso_buzzer_en
+		);
+
+	gerador_som : gerador_sons
+		port map(
+			clk => clock,
+			sound_on => s_pulso_buzzer_en,
+			sound_out => buzzer_i
+		);	
 end architecture;

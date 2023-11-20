@@ -26,6 +26,7 @@ entity circuito_semana_1 is
 		vitoria          : out std_logic;
 	   derrota          : out std_logic;
 	   leds	         : out std_logic_vector(3 downto 0);
+	   buzzer_i	 : out std_logic;
 		nivel_agua_0	 : out std_logic_vector(6 downto 0);
 		nivel_agua_1	 : out std_logic_vector(6 downto 0);
 		db_estado        : out std_logic_vector(6 downto 0);
@@ -51,6 +52,7 @@ architecture comportamental of circuito_semana_1 is
 	signal s_fim_tempo	: std_logic;
 	signal s_jogando		: std_logic;
 	signal s_botoes: std_logic_vector(3 downto 0);
+	signal s_buzzer_en: std_logic;
 	
 	component hexa7seg is 
 		port(
@@ -73,6 +75,8 @@ architecture comportamental of circuito_semana_1 is
 			incrementa_1	 : in  std_logic;
 			incrementa_2	 : in  std_logic;
 			zera_tempo	 : in  std_logic;
+			buzzer_en		 : in  std_logic;
+			buzzer_i		 : out std_logic;
 			buracos          : out std_logic_vector(3 downto 0);
 			sem_buracos	 : out std_logic;
 			um_buraco	 : out std_logic;
@@ -104,6 +108,7 @@ architecture comportamental of circuito_semana_1 is
 			incrementa_2	  : out std_logic;
 			zera_tempo	  : out std_logic;
 			jogando 		  : out std_logic;
+			buzzer_en	 : out std_logic;
 			db_estado	  : out std_logic_vector(3 downto 0)
 		);
 	end component;
@@ -112,8 +117,8 @@ begin
 	leds <= s_buracos;
 	led_externo <= s_buracos;
 	db_clock <= clock;
-	s_botoes <= not(botoes);
-	--s_botoes <= (botoes); -- depuração duração do jogo
+	--s_botoes <= not(botoes);
+	s_botoes <= (botoes); -- depuração duração do jogo
 
 	HEX_Estado : hexa7seg 
 		port map(
@@ -146,6 +151,8 @@ begin
 			incrementa_1 => s_incrementa_1,
 			incrementa_2 => s_incrementa_2,
 			zera_tempo => s_zera_tempo,
+			buzzer_en => s_buzzer_en,
+			buzzer_i => buzzer_i,
 			buracos => s_buracos,
 			db_buracos => db_buracos,
 			sem_buracos => s_sem_buracos,
@@ -176,6 +183,7 @@ begin
 			incrementa_2 => s_incrementa_2,
 			zera_tempo => s_zera_tempo,
 			jogando => s_jogando,
+			buzzer_en => s_buzzer_en,
 			db_estado => s_estado
 		);
 

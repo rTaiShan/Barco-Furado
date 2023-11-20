@@ -14,6 +14,7 @@ entity circuito_wrapper is
 		buracos_pwm  : out std_logic_vector(3 downto 0);
 		vitoria_led : out std_logic;
 		derrota_led : out std_logic;
+		buzzer_i	 : out std_logic;
 		db_estado : out std_logic_vector(6 downto 0);
 		db_clock : out std_logic;
 		nivel_agua_0, nivel_agua_1 : out std_logic_vector(6 downto 0)
@@ -60,6 +61,8 @@ architecture comportamental of circuito_wrapper is
 			fim_contagem : out std_logic;
 			pronto : out std_logic;
 
+			buzzer_i	 : out std_logic;
+
 			db_estado : out std_logic_vector(6 downto 0);
 			db_clock : out std_logic;
 			nivel_agua_0, nivel_agua_1 : out std_logic_vector(6 downto 0)
@@ -90,6 +93,9 @@ begin
 
 		fim_contagem => s_fim_contagem,
 		pronto => s_pronto,
+
+		buzzer_i	=> buzzer_i,
+
 		nivel_agua_0 => nivel_agua_0,
 		nivel_agua_1 => nivel_agua_1,
 		db_estado => db_estado,

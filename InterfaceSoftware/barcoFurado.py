@@ -55,15 +55,15 @@ def display_score():
         current_score = current_score
         nivel_agua_surface = game_font.render(f'{percentage}%', True, percentage_color)
         last_score = current_score
-        if(data[3] == '1'):
-        	game_active = False
-                last_result = 'v'
-        elif(data[5] == '1'):
-                game_active = False
-                last_result = 'd'  
+        if data[3] == '1':
+            game_active = False
+            last_result = 'v'
+        elif data[5] == '1':
+            game_active = False
+            last_result = 'd'
         else:
-                game_active = False
-                last_result = ''    
+            game_active = False
+            last_result = ''
     score_surface = game_font.render(f'{current_score} pts', True, '#ffffff')
     screen.blit(time_surface, (width/9.6, height/108))
     screen.blit(score_surface, (width/1.48, height/108))

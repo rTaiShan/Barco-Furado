@@ -463,7 +463,7 @@ VCCIO3B                      : T11       : power  :                   : 2.5V    
 dificuldade[1]               : T12       : input  : 2.5 V             :         : 4A        : Y              
 dificuldade[0]               : T13       : input  : 2.5 V             :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 5A        :                
+buzzer_i                     : T15       : output : 2.5 V             :         : 5A        : Y              
 GND                          : T16       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T17       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T18       :        :                   :         : 5A        :                

@@ -20,7 +20,8 @@ entity gera_buracos is
 		dificuldade  : in  std_logic_vector(1 downto 0);
 		db_buracos_in: in  std_logic_vector(3 downto 0);
 		db_buracos   : in  std_logic; -- Quando ativo, buracos <= db_buracos_in
-		buracos		 : out std_logic_vector(3 downto 0)
+		buracos		 : out std_logic_vector(3 downto 0);
+		trocou_buraco : out std_logic
 	);
 end entity gera_buracos;
 
@@ -40,7 +41,8 @@ component gera_buracos_df is
 		zero_buracos  	  : out std_logic;
 		um_buraco  	  	  : out std_logic;
 		dois_buracos  	  : out std_logic;
-		faz_algo			  : out std_logic
+		faz_algo			  : out std_logic;
+		trocou_buraco    : out std_logic
 	);
 end component;
 
@@ -77,7 +79,8 @@ df : gera_buracos_df
 		zero_buracos => s_zero_buracos,
 		um_buraco => s_um_buraco,
 		dois_buracos => s_dois_buracos,
-		faz_algo => s_faz_algo
+		faz_algo => s_faz_algo,
+		trocou_buraco => trocou_buraco
 	);
 	
 uc : gera_buracos_uc

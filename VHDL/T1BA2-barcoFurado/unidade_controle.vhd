@@ -32,6 +32,7 @@ entity unidade_controle is
 		incrementa_2	 : out std_logic;
 		zera_tempo	 : out std_logic;
 		jogando      : out std_logic;
+		buzzer_en	 : out std_logic;
 		db_estado	 : out std_logic_vector(3 downto 0)
 	);
 end entity unidade_controle;
@@ -98,6 +99,10 @@ begin
 	with Eatual select
 	jogando <= '1' when em_jogo,
 				  '0' when others;
+
+	with Eatual select
+	buzzer_en <= '1' when final_derrota | em_jogo,
+				 '0' when others;
 	
 	-- saida de depuracao (db_estado)
 	with Eatual select

@@ -20,6 +20,8 @@ entity wrapper_df is
 		
 		fim_contagem : out std_logic;
 		pronto		 : out std_logic;
+
+		buzzer_i	 : out std_logic;
 		
 		db_estado    : out std_logic_vector(6 downto 0);
 		db_clock		 : out std_logic;
@@ -54,19 +56,20 @@ component circuito_semana_1 is
 		clock            : in  std_logic;
 		reset            : in  std_logic;
 		iniciar          : in  std_logic;
-		dificuldade		  : in  std_logic_vector(1 downto 0);
+		dificuldade	 : in  std_logic_vector(1 downto 0);
 		botoes           : in  std_logic_vector(3 downto 0);
-		buracos_in 		  : in  std_logic_vector(3 downto 0);
+		buracos_in 	 : in  std_logic_vector(3 downto 0);
 		db_buracos		  : in std_logic;
 		pronto           : out std_logic;
 		vitoria          : out std_logic;
 	   derrota          : out std_logic;
-	   leds	        	  : out std_logic_vector(3 downto 0);
-		nivel_agua_0	  : out std_logic_vector(6 downto 0);
-		nivel_agua_1	  : out std_logic_vector(6 downto 0);
+	   leds	         : out std_logic_vector(3 downto 0);
+	   buzzer_i	 : out std_logic;
+		nivel_agua_0	 : out std_logic_vector(6 downto 0);
+		nivel_agua_1	 : out std_logic_vector(6 downto 0);
 		db_estado        : out std_logic_vector(6 downto 0);
-		db_clock	        : out std_logic;
-		led_externo   	  : out std_logic_Vector(3 downto 0)
+		db_clock	 : out std_logic;
+		led_externo   : out std_logic_vector(3 downto 0)
 	);
 end component;
 
@@ -124,12 +127,14 @@ circuito_principal : circuito_semana_1
 		vitoria => s_vitoria,
 	   derrota => s_derrota,
 	   leds => s_buracos,
+	   buzzer_i => buzzer_i,
 		nivel_agua_0 => nivel_agua_0,
 		nivel_agua_1 => nivel_agua_1,
 		db_estado => db_estado,
 		db_clock	=> db_clock,
 		led_externo => s_buracos_externos
 	);
+
 	
 controle_buraco_pwm : controle_buraco
   port map (

@@ -26,7 +26,8 @@ entity gera_buracos_df is
 		zero_buracos  	  : out std_logic;
 		um_buraco  	  	  : out std_logic;
 		dois_buracos  	  : out std_logic;
-		faz_algo			  : out std_logic
+		faz_algo			  : out std_logic;
+		trocou_buraco : out std_logic
 	);
 end entity gera_buracos_df;
 
@@ -47,7 +48,8 @@ signal s_add, s_move : std_logic_vector(3 downto 0);
 			clear  : in  std_logic;
 			enable : in  std_logic;
 			D      : in  std_logic_vector (N-1 downto 0);
-			Q      : out std_logic_vector (N-1 downto 0) 
+			Q      : out std_logic_vector (N-1 downto 0);
+			updated: out std_logic
 		);
 	end component;
 	
@@ -123,7 +125,8 @@ registrador: registrador_n
       clear  => reset,
       enable => registra_buracos,
       D      => s_novos_buracos,
-      Q      => s_buracos
+      Q      => s_buracos,
+	  updated => trocou_buraco
 	);
 					
 
