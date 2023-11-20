@@ -36,10 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "vitoria_led",
-					"strict" : false
-				},
-				{
 					"name" : "derrota_led",
 					"strict" : false
 				},
@@ -129,6 +125,14 @@
 				},
 				{
 					"name" : "nivel_agua_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "db_saida_serial",
 					"strict" : false
 				},
 				{

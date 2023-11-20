@@ -7,6 +7,14 @@ Eatual.reseta 0 0 1 0 1
 Eatual.inicia 0 1 0 0 1 
 Eatual.joga 1 0 0 0 1 
 
+State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_uc:U1_UC|Eatual
+Name Eatual.final Eatual.transmissao Eatual.espera Eatual.preparacao Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 
+Eatual.preparacao 0 0 0 1 1 
+Eatual.espera 0 0 1 0 1 
+Eatual.transmissao 0 1 0 0 1 
+Eatual.final 1 0 0 0 1 
+
 State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC|Eatual
 Name Eatual.final_derrota Eatual.final_vitoria Eatual.em_jogo Eatual.inicializa_elementos Eatual.inicial 
 Eatual.inicial 0 0 0 0 0 

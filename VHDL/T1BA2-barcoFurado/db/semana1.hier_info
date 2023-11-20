@@ -44,6 +44,8 @@ nivel_agua_1[3] << wrapper_df:df.nivel_agua_1[3]
 nivel_agua_1[4] << wrapper_df:df.nivel_agua_1[4]
 nivel_agua_1[5] << wrapper_df:df.nivel_agua_1[5]
 nivel_agua_1[6] << wrapper_df:df.nivel_agua_1[6]
+saida_serial << wrapper_df:df.saida_serial
+db_saida_serial << wrapper_df:df.saida_serial
 
 
 |circuito_wrapper|wrapper_df:df
@@ -103,6 +105,7 @@ nivel_agua_1[3] <= circuito_semana_1:circuito_principal.nivel_agua_1[3]
 nivel_agua_1[4] <= circuito_semana_1:circuito_principal.nivel_agua_1[4]
 nivel_agua_1[5] <= circuito_semana_1:circuito_principal.nivel_agua_1[5]
 nivel_agua_1[6] <= circuito_semana_1:circuito_principal.nivel_agua_1[6]
+saida_serial <= circuito_semana_1:circuito_principal.saida_serial
 
 
 |circuito_wrapper|wrapper_df:df|contador_inicializacao:contagem_regressiva
@@ -229,24 +232,33 @@ led_derrota <= led_derrota.DB_MAX_OUTPUT_PORT_TYPE
 |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal
 clock => dataflow:DF.clock
 clock => unidade_controle:UC.clock
+clock => transmissor:TX.clock
 clock => db_clock.DATAIN
 reset => dataflow:DF.reset
 reset => unidade_controle:UC.reset
+reset => transmissor:TX.reset
 iniciar => unidade_controle:UC.iniciar
+iniciar => transmissor:TX.jogar
 dificuldade[0] => dataflow:DF.dificuldade[0]
+dificuldade[0] => transmissor:TX.dificuldade[0]
 dificuldade[1] => dataflow:DF.dificuldade[1]
+dificuldade[1] => transmissor:TX.dificuldade[1]
 botoes[0] => dataflow:DF.botoes[0]
+botoes[0] => transmissor:TX.botoes[0]
 botoes[1] => dataflow:DF.botoes[1]
+botoes[1] => transmissor:TX.botoes[1]
 botoes[2] => dataflow:DF.botoes[2]
+botoes[2] => transmissor:TX.botoes[2]
 botoes[3] => dataflow:DF.botoes[3]
+botoes[3] => transmissor:TX.botoes[3]
 buracos_in[0] => dataflow:DF.buracos_in[0]
 buracos_in[1] => dataflow:DF.buracos_in[1]
 buracos_in[2] => dataflow:DF.buracos_in[2]
 buracos_in[3] => dataflow:DF.buracos_in[3]
 db_buracos => dataflow:DF.db_buracos
 pronto <= unidade_controle:UC.pronto
-vitoria <= unidade_controle:UC.vitoria
-derrota <= unidade_controle:UC.derrota
+vitoria <= vitoria.DB_MAX_OUTPUT_PORT_TYPE
+derrota <= comb.DB_MAX_OUTPUT_PORT_TYPE
 leds[0] <= dataflow:DF.buracos[0]
 leds[1] <= dataflow:DF.buracos[1]
 leds[2] <= dataflow:DF.buracos[2]
@@ -278,6 +290,7 @@ led_externo[0] <= dataflow:DF.buracos[0]
 led_externo[1] <= dataflow:DF.buracos[1]
 led_externo[2] <= dataflow:DF.buracos[2]
 led_externo[3] <= dataflow:DF.buracos[3]
+saida_serial <= transmissor:TX.saida_serial
 
 
 |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Estado
@@ -547,6 +560,26 @@ nivel_agua_1[1] <= contador_custom:CONTA_AGUA.Q[1]
 nivel_agua_1[2] <= contador_custom:CONTA_AGUA.Q[2]
 nivel_agua_1[3] <= contador_custom:CONTA_AGUA.Q[3]
 fim_tempo <= contador_m_n:CONTA_TEMPO.fim
+contador_agua[0] <= contador_custom:CONTA_AGUA.Q[0]
+contador_agua[1] <= contador_custom:CONTA_AGUA.Q[1]
+contador_agua[2] <= contador_custom:CONTA_AGUA.Q[2]
+contador_agua[3] <= contador_custom:CONTA_AGUA.Q[3]
+contador_agua[4] <= contador_custom:CONTA_AGUA.Q[4]
+contador_agua[5] <= contador_custom:CONTA_AGUA.Q[5]
+contador_agua[6] <= contador_custom:CONTA_AGUA.Q[6]
+contador_agua[7] <= contador_custom:CONTA_AGUA.Q[7]
+contador_tempo[0] <= contador_m_n:CONTA_TEMPO.Q[0]
+contador_tempo[1] <= contador_m_n:CONTA_TEMPO.Q[1]
+contador_tempo[2] <= contador_m_n:CONTA_TEMPO.Q[2]
+contador_tempo[3] <= contador_m_n:CONTA_TEMPO.Q[3]
+contador_tempo[4] <= contador_m_n:CONTA_TEMPO.Q[4]
+contador_tempo[5] <= contador_m_n:CONTA_TEMPO.Q[5]
+contador_tempo[6] <= contador_m_n:CONTA_TEMPO.Q[6]
+contador_tempo[7] <= contador_m_n:CONTA_TEMPO.Q[7]
+contador_tempo[8] <= contador_m_n:CONTA_TEMPO.Q[8]
+contador_tempo[9] <= contador_m_n:CONTA_TEMPO.Q[9]
+contador_tempo[10] <= contador_m_n:CONTA_TEMPO.Q[10]
+contador_tempo[11] <= contador_m_n:CONTA_TEMPO.Q[11]
 
 
 |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO
@@ -1292,6 +1325,470 @@ db_estado[0] <= db_estado[0].DB_MAX_OUTPUT_PORT_TYPE
 db_estado[1] <= <GND>
 db_estado[2] <= db_estado.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[3] <= db_estado[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX
+clock => contador_m:seletor.clock
+clock => tx_serial_7O1:tx.clock
+reset => contador_m:seletor.zera_as
+reset => tx_serial_7O1:tx.reset
+jogar => Mux6.IN21
+vitoria => Mux6.IN22
+derrota => Mux6.IN23
+dificuldade[0] => Mux3.IN31
+dificuldade[0] => Mux7.IN5
+dificuldade[1] => Mux7.IN4
+botoes[0] => Mux6.IN27
+botoes[1] => Mux6.IN26
+botoes[2] => Mux6.IN25
+botoes[3] => Mux6.IN24
+buracos[0] => Mux6.IN31
+buracos[1] => Mux6.IN30
+buracos[2] => Mux6.IN29
+buracos[3] => Mux6.IN28
+contador_tempo[0] => hex_ascii_decoder:decoder_tempo0.hex[0]
+contador_tempo[1] => hex_ascii_decoder:decoder_tempo0.hex[1]
+contador_tempo[2] => hex_ascii_decoder:decoder_tempo0.hex[2]
+contador_tempo[3] => hex_ascii_decoder:decoder_tempo0.hex[3]
+contador_tempo[4] => hex_ascii_decoder:decoder_tempo1.hex[0]
+contador_tempo[5] => hex_ascii_decoder:decoder_tempo1.hex[1]
+contador_tempo[6] => hex_ascii_decoder:decoder_tempo1.hex[2]
+contador_tempo[7] => hex_ascii_decoder:decoder_tempo1.hex[3]
+contador_tempo[8] => hex_ascii_decoder:decoder_tempo2.hex[0]
+contador_tempo[9] => hex_ascii_decoder:decoder_tempo2.hex[1]
+contador_tempo[10] => hex_ascii_decoder:decoder_tempo2.hex[2]
+contador_tempo[11] => hex_ascii_decoder:decoder_tempo2.hex[3]
+contador_agua[0] => hex_ascii_decoder:decoder_agua0.hex[0]
+contador_agua[1] => hex_ascii_decoder:decoder_agua0.hex[1]
+contador_agua[2] => hex_ascii_decoder:decoder_agua0.hex[2]
+contador_agua[3] => hex_ascii_decoder:decoder_agua0.hex[3]
+contador_agua[4] => hex_ascii_decoder:decoder_agua1.hex[0]
+contador_agua[5] => hex_ascii_decoder:decoder_agua1.hex[1]
+contador_agua[6] => hex_ascii_decoder:decoder_agua1.hex[2]
+contador_agua[7] => hex_ascii_decoder:decoder_agua1.hex[3]
+saida_serial <= tx_serial_7O1:tx.dado_serial
+db_saida_serial <= tx_serial_7O1:tx.db_dado_serial
+fim_transmissao <= fim_transmissao.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|contador_m:seletor
+clock => IQ[0].CLK
+clock => IQ[1].CLK
+clock => IQ[2].CLK
+clock => IQ[3].CLK
+clock => IQ[4].CLK
+zera_as => IQ[0].ACLR
+zera_as => IQ[1].ACLR
+zera_as => IQ[2].ACLR
+zera_as => IQ[3].ACLR
+zera_as => IQ[4].ACLR
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= IQ[4].DB_MAX_OUTPUT_PORT_TYPE
+fim <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+meio <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx
+clock => tx_serial_uc:U1_UC.clock
+clock => tx_serial_7O1_fd:U2_FD.clock
+clock => contador_m_n:U3_TICK.clock
+clock => db_clock.DATAIN
+reset => contador_m_n:U3_TICK.zera_as
+reset => tx_serial_uc:U1_UC.reset
+reset => tx_serial_7O1_fd:U2_FD.reset
+partida => tx_serial_uc:U1_UC.partida
+partida => db_partida.DATAIN
+dados_ascii[0] => tx_serial_7O1_fd:U2_FD.dados_ascii[0]
+dados_ascii[1] => tx_serial_7O1_fd:U2_FD.dados_ascii[1]
+dados_ascii[2] => tx_serial_7O1_fd:U2_FD.dados_ascii[2]
+dados_ascii[3] => tx_serial_7O1_fd:U2_FD.dados_ascii[3]
+dados_ascii[4] => tx_serial_7O1_fd:U2_FD.dados_ascii[4]
+dados_ascii[5] => tx_serial_7O1_fd:U2_FD.dados_ascii[5]
+dados_ascii[6] => tx_serial_7O1_fd:U2_FD.dados_ascii[6]
+dado_serial <= tx_serial_7O1_fd:U2_FD.saida_serial
+pronto <= tx_serial_uc:U1_UC.pronto
+db_clock <= clock.DB_MAX_OUTPUT_PORT_TYPE
+db_tick <= contador_m_n:U3_TICK.fim
+db_partida <= partida.DB_MAX_OUTPUT_PORT_TYPE
+db_dado_serial <= tx_serial_7O1_fd:U2_FD.saida_serial
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_uc:U1_UC
+clock => Eatual~1.DATAIN
+reset => Eatual~3.DATAIN
+partida => Eprox.preparacao.DATAB
+partida => Selector0.IN2
+tick => Eprox.OUTPUTSELECT
+tick => Eprox.OUTPUTSELECT
+tick => Eprox.transmissao.DATAB
+fim => Eprox.DATAA
+fim => Selector2.IN3
+fim => Eprox.DATAA
+fim => Selector1.IN2
+zera <= zera.DB_MAX_OUTPUT_PORT_TYPE
+conta <= conta.DB_MAX_OUTPUT_PORT_TYPE
+carrega <= carrega.DB_MAX_OUTPUT_PORT_TYPE
+desloca <= desloca.DB_MAX_OUTPUT_PORT_TYPE
+pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD
+clock => deslocador_n:U1.clock
+clock => contador_m_n:U2.clock
+reset => deslocador_n:U1.reset
+reset => contador_m_n:U2.zera_as
+zera => contador_m_n:U2.zera_s
+conta => contador_m_n:U2.conta
+carrega => deslocador_n:U1.carrega
+desloca => deslocador_n:U1.desloca
+dados_ascii[0] => s_dados.IN0
+dados_ascii[0] => deslocador_n:U1.dados[2]
+dados_ascii[1] => s_dados.IN1
+dados_ascii[1] => deslocador_n:U1.dados[3]
+dados_ascii[2] => s_dados.IN1
+dados_ascii[2] => deslocador_n:U1.dados[4]
+dados_ascii[3] => s_dados.IN1
+dados_ascii[3] => deslocador_n:U1.dados[5]
+dados_ascii[4] => s_dados.IN1
+dados_ascii[4] => deslocador_n:U1.dados[6]
+dados_ascii[5] => s_dados.IN1
+dados_ascii[5] => deslocador_n:U1.dados[7]
+dados_ascii[6] => s_dados.IN1
+dados_ascii[6] => deslocador_n:U1.dados[8]
+saida_serial <= deslocador_n:U1.saida[0]
+fim <= contador_m_n:U2.fim
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1
+clock => IQ[0].CLK
+clock => IQ[1].CLK
+clock => IQ[2].CLK
+clock => IQ[3].CLK
+clock => IQ[4].CLK
+clock => IQ[5].CLK
+clock => IQ[6].CLK
+clock => IQ[7].CLK
+clock => IQ[8].CLK
+clock => IQ[9].CLK
+clock => IQ[10].CLK
+reset => IQ[0].PRESET
+reset => IQ[1].PRESET
+reset => IQ[2].PRESET
+reset => IQ[3].PRESET
+reset => IQ[4].PRESET
+reset => IQ[5].PRESET
+reset => IQ[6].PRESET
+reset => IQ[7].PRESET
+reset => IQ[8].PRESET
+reset => IQ[9].PRESET
+reset => IQ[10].PRESET
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+carrega => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+desloca => IQ.OUTPUTSELECT
+entrada_serial => IQ.DATAB
+dados[0] => IQ.DATAB
+dados[1] => IQ.DATAB
+dados[2] => IQ.DATAB
+dados[3] => IQ.DATAB
+dados[4] => IQ.DATAB
+dados[5] => IQ.DATAB
+dados[6] => IQ.DATAB
+dados[7] => IQ.DATAB
+dados[8] => IQ.DATAB
+dados[9] => IQ.DATAB
+dados[10] => IQ.DATAB
+saida[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= IQ[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= IQ[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= IQ[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= IQ[7].DB_MAX_OUTPUT_PORT_TYPE
+saida[8] <= IQ[8].DB_MAX_OUTPUT_PORT_TYPE
+saida[9] <= IQ[9].DB_MAX_OUTPUT_PORT_TYPE
+saida[10] <= IQ[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2
+clock => IQ[0].CLK
+clock => IQ[1].CLK
+clock => IQ[2].CLK
+clock => IQ[3].CLK
+zera_as => IQ[0].ACLR
+zera_as => IQ[1].ACLR
+zera_as => IQ[2].ACLR
+zera_as => IQ[3].ACLR
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
+fim <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+meio <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK
+clock => IQ[0].CLK
+clock => IQ[1].CLK
+clock => IQ[2].CLK
+clock => IQ[3].CLK
+clock => IQ[4].CLK
+clock => IQ[5].CLK
+clock => IQ[6].CLK
+clock => IQ[7].CLK
+clock => IQ[8].CLK
+zera_as => IQ[0].ACLR
+zera_as => IQ[1].ACLR
+zera_as => IQ[2].ACLR
+zera_as => IQ[3].ACLR
+zera_as => IQ[4].ACLR
+zera_as => IQ[5].ACLR
+zera_as => IQ[6].ACLR
+zera_as => IQ[7].ACLR
+zera_as => IQ[8].ACLR
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+zera_s => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+conta => IQ.OUTPUTSELECT
+Q[0] <= IQ[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= IQ[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= IQ[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= IQ[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= IQ[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= IQ[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= IQ[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= IQ[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= IQ[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= <GND>
+Q[10] <= <GND>
+Q[11] <= <GND>
+Q[12] <= <GND>
+fim <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+meio <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_tempo2
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN10
+hex[1] => Mux1.IN10
+hex[1] => Mux2.IN10
+hex[1] => Mux3.IN10
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN9
+hex[2] => Mux1.IN9
+hex[2] => Mux2.IN9
+hex[2] => Mux3.IN9
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN8
+hex[3] => Mux1.IN8
+hex[3] => Mux2.IN8
+hex[3] => Mux3.IN8
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+ascii[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ascii[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ascii[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ascii[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ascii[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ascii[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ascii[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_tempo1
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN10
+hex[1] => Mux1.IN10
+hex[1] => Mux2.IN10
+hex[1] => Mux3.IN10
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN9
+hex[2] => Mux1.IN9
+hex[2] => Mux2.IN9
+hex[2] => Mux3.IN9
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN8
+hex[3] => Mux1.IN8
+hex[3] => Mux2.IN8
+hex[3] => Mux3.IN8
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+ascii[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ascii[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ascii[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ascii[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ascii[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ascii[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ascii[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_tempo0
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN10
+hex[1] => Mux1.IN10
+hex[1] => Mux2.IN10
+hex[1] => Mux3.IN10
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN9
+hex[2] => Mux1.IN9
+hex[2] => Mux2.IN9
+hex[2] => Mux3.IN9
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN8
+hex[3] => Mux1.IN8
+hex[3] => Mux2.IN8
+hex[3] => Mux3.IN8
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+ascii[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ascii[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ascii[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ascii[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ascii[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ascii[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ascii[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_agua1
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN10
+hex[1] => Mux1.IN10
+hex[1] => Mux2.IN10
+hex[1] => Mux3.IN10
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN9
+hex[2] => Mux1.IN9
+hex[2] => Mux2.IN9
+hex[2] => Mux3.IN9
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN8
+hex[3] => Mux1.IN8
+hex[3] => Mux2.IN8
+hex[3] => Mux3.IN8
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+ascii[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ascii[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ascii[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ascii[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ascii[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ascii[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ascii[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_agua0
+hex[0] => Mux4.IN19
+hex[0] => Mux5.IN19
+hex[0] => Mux6.IN19
+hex[1] => Mux0.IN10
+hex[1] => Mux1.IN10
+hex[1] => Mux2.IN10
+hex[1] => Mux3.IN10
+hex[1] => Mux4.IN18
+hex[1] => Mux5.IN18
+hex[1] => Mux6.IN18
+hex[2] => Mux0.IN9
+hex[2] => Mux1.IN9
+hex[2] => Mux2.IN9
+hex[2] => Mux3.IN9
+hex[2] => Mux4.IN17
+hex[2] => Mux5.IN17
+hex[2] => Mux6.IN17
+hex[3] => Mux0.IN8
+hex[3] => Mux1.IN8
+hex[3] => Mux2.IN8
+hex[3] => Mux3.IN8
+hex[3] => Mux4.IN16
+hex[3] => Mux5.IN16
+hex[3] => Mux6.IN16
+ascii[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ascii[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ascii[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ascii[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ascii[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ascii[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ascii[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm

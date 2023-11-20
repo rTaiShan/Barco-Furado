@@ -119,4 +119,19 @@ set_global_assignment -name VHDL_FILE detector_trapaca.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_T15 -to buzzer_i
+set_global_assignment -name VHDL_FILE circuito_semana_1_tb_1.vhd
+set_global_assignment -name VHDL_FILE circuito_semana_1_tb_2.vhd
+set_global_assignment -name VHDL_FILE circuito_semana_1_tb_3.vhd
+set_global_assignment -name VHDL_FILE contador_m_n.vhd
+set_global_assignment -name VHDL_FILE controle_buraco_tb.vhd
+set_global_assignment -name VHDL_FILE edge_detector.vhd
+set_global_assignment -name VHDL_FILE gerador_sons_tb.vhd
+set_global_assignment -name VHDL_FILE hex_ascii_decoder.vhd
+set_global_assignment -name VHDL_FILE transmissor.vhd
+set_global_assignment -name VHDL_FILE deslocador_n.vhd
+set_global_assignment -name VHDL_FILE tx_serial_7O1.vhd
+set_global_assignment -name VHDL_FILE tx_serial_7O1_fd.vhd
+set_global_assignment -name VHDL_FILE tx_serial_uc.vhd
+set_location_assignment PIN_J17 -to saida_serial
+set_location_assignment PIN_G13 -to db_saida_serial
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
