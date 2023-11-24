@@ -22,6 +22,7 @@ entity circuito_semana_1 is
 		botoes           : in  std_logic_vector(3 downto 0);
 		buracos_in 	 : in  std_logic_vector(3 downto 0);
 		db_buracos		  : in std_logic;
+		conta_regressivo  : in std_logic;
 		pronto           : out std_logic;
 		vitoria          : out std_logic;
 	   derrota          : out std_logic;
@@ -53,10 +54,10 @@ architecture comportamental of circuito_semana_1 is
 	signal s_fim_tempo	: std_logic;
 	signal s_jogando		: std_logic;
 	signal s_botoes: std_logic_vector(3 downto 0);
-	signal s_buzzer_en: std_logic;
 	signal s_vitoria, s_derrota : std_logic;
 	signal s_contador_agua : std_logic_vector(7 downto 0);
 	signal s_contador_tempo : std_logic_vector(11 downto 0);
+	signal s_buzzer_en : std_logic;
 	
 	component hexa7seg is 
 		port(
@@ -114,7 +115,6 @@ architecture comportamental of circuito_semana_1 is
 			incrementa_2	  : out std_logic;
 			zera_tempo	  : out std_logic;
 			jogando 		  : out std_logic;
-			buzzer_en	 : out std_logic;
 			db_estado	  : out std_logic_vector(3 downto 0)
 		);
 	end component;
@@ -162,6 +162,8 @@ begin
 			sseg => nivel_agua_1
 		);
 		
+	s_buzzer_en <= conta_regressivo OR s_derrota;
+	
 	DF : dataflow
 		port map(
 			clock => clock,
@@ -209,7 +211,6 @@ begin
 			incrementa_2 => s_incrementa_2,
 			zera_tempo => s_zera_tempo,
 			jogando => s_jogando,
-			buzzer_en => s_buzzer_en,
 			db_estado => s_estado
 		);
 		

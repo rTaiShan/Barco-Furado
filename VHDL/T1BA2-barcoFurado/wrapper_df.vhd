@@ -61,6 +61,7 @@ component circuito_semana_1 is
 		botoes           : in  std_logic_vector(3 downto 0);
 		buracos_in 	 : in  std_logic_vector(3 downto 0);
 		db_buracos		  : in std_logic;
+		conta_regressivo  : in std_logic;
 		pronto           : out std_logic;
 		vitoria          : out std_logic;
 	   derrota          : out std_logic;
@@ -125,6 +126,7 @@ circuito_principal : circuito_semana_1
 		botoes => botoes,
 		buracos_in => "0000",
 		db_buracos => '0', 
+		conta_regressivo => conta_regressivo,
 		pronto => pronto,
 		vitoria => s_vitoria,
 	   derrota => s_derrota,
