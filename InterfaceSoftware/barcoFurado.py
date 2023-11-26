@@ -1,172 +1,16 @@
 import pygame
 from sys import exit
-import random
-from time import sleep
-import serial
-import serial.tools.list_ports
-import threading
-import re
+from leaderboard import fetch_leaderboard, append_leaderboard, print_leaderboard, DEFAULT_LEADERBOARD_PATH
+from gameCalculations import nivel_agua, display_score, countdown, show_leaderboard
+from animations import baloes, animacao_raio, animacao_barco, update_screens_game_active
+from serial_communication import connect_to_serial
+from playerInput import input_player_name
+from music import play_music, stop_music, load_music
 
-def baloes(height_baloes, screen):
-    screen.blit(balao, (width/6.8, height_baloes))
-    screen.blit(balao, (width/2.8, height_baloes))
-    screen.blit(balao, (width/2, height_baloes))
-    screen.blit(balao, (width/1.5, height_baloes))
-
-def nivel_agua():
-    nivel_da_agua = int(data[23:25], 16)  
-    return nivel_da_agua       
-
-
-def display_score(nivel_da_agua, screen):
-    global current_score, game_active, last_score, current_time, last_result
-
-    percentage = min([int(nivel_da_agua*10000/(255*35)), 100])
-    if percentage < 50:
-        percentage_color = 'green'
-    elif percentage < 75:
-        percentage_color = 'yellow'
-    elif percentage < 90:
-        percentage_color = 'orange'
-    else:
-        percentage_color = 'red'
-
-    current_time = int(data[19:22], 16) * 32 / 1000
-    if(current_time < 10):
-        current_score += int((2-percentage/100)*(int(pygame.time.get_ticks()/13)*mode - start_score)/100)
-        time_surface = game_font.render(f'00:0{current_time}', True, '#ffffff')
-        nivel_agua_surface = game_font.render(f'{percentage}%', True, percentage_color)
-    elif(current_time < 60):
-        current_score += int((2-percentage/100)*(int(pygame.time.get_ticks()/13)*mode - start_score)/100)
-        time_surface = game_font.render(f'00:{current_time}', True, '#ffffff')
-        nivel_agua_surface = game_font.render(f'{percentage}%', True, percentage_color)
-    else:
-        time_surface = game_font.render('01:00', True, '#ffffff')
-        current_score = current_score
-        nivel_agua_surface = game_font.render(f'{percentage}%', True, percentage_color)
-        last_score = current_score
-        if data[3] == '1':
-            game_active = False
-            last_result = 'v'
-        elif data[5] == '1':
-            game_active = False
-            last_result = 'd'
-        else:
-            game_active = False
-            last_result = ''
-    score_surface = game_font.render(f'{current_score} pts', True, '#ffffff')
-    screen.blit(time_surface, (width/9.6, height/108))
-    screen.blit(score_surface, (width/1.48, height/108))
-    screen.blit(nivel_agua_surface, (width/1.48, height/27))
-
-    return [current_score, game_active, last_score, current_time, last_result]
-
-def countdown(screen):
-    current_count = start_count - int(pygame.time.get_ticks()/1000)
-    if (current_count > 0):
-        count_surface = game_font_big.render(f'{current_count}', True, '#ffffff')
-    else:
-        count_surface = game_font_big.render('Começou!', True, '#ffffff')
-        game_active = True
-        countdown_start = False
-        sleep(0.077)
-    count_rect = count_surface.get_rect(center = (width/2.4, height/1.89))
-    screen.blit(count_surface, count_rect)
-    start_time_game = int(pygame.time.get_ticks()/1000) 
-    return [start_time_game, game_active, countdown_start]
-
-def animacao_barco(index, barco_menu):
-    barco_menu_index = index
-    barco_menu_index += 0.1
-    if barco_menu_index >= len(barco_menu): 
-        barco_menu_index = 0
-    barco_surface = barco_menu[int(barco_menu_index)]
-    return [barco_surface, barco_menu_index]
-
-def animacao_raio(lightning, raio_time, last_raio_time):
-    if(raio_time == 0):
-        last_raio_time = int(pygame.time.get_ticks()/1000)
-        lightning_x = 2000
-    raio_time = int(pygame.time.get_ticks()/1000)
-    if(raio_time - last_raio_time > 0.5):
-        lightning_x = random.randint(-500, 2000)
-        raio_time = 0
-    screen.blit(lightning, (lightning_x, -50))
-    return [lightning_x, raio_time, last_raio_time]
-
-# J.V.D.d.b....B....T...A..\0
-def read_serial(serial_conn):
-    global game_end, data
-    ## Update condition
-    while True:
-        if game_end:
-            break
-
-        if serial_conn.is_open:
-            read_data = serial_conn.read_all()
-            try:
-                data = re.findall(b'J[01]V[01]D[01]d[nfd]b[01]{4}B[01]{4}T[0-9, A-F]{3}A[0-9, A-F]{2}\x00', read_data)[-1].decode()
-                print(data)
-            except IndexError:
-                pass
-
-####################
-## Serial treatment
-####################
-
-global data
 data = "J0V0D0dfb0000B0000T000A00"
 baudrate = 115200
 
-def search_for_ports():
-    ports = list(serial.tools.list_ports.comports())
-    return ports
-
-
-if(len(search_for_ports()) != 1):
-    print('Available ports')
-    for index, port in enumerate(search_for_ports()):
-        print('[{}] {}'.format(index, port.description))
-
-    print('\nSelect port to connect (use index number), or use exit to quit')
-    ser_device = ""
-    while ser_device != "exit":
-        try:
-            ser_device = input('> ')
-            port = search_for_ports()[int(ser_device)].device
-            break
-        except:
-            print('Not a valid port')
-else:
-    port = search_for_ports()[0].device
-
-try:
-    serial_conn = serial.Serial(
-    port,
-    baudrate, 
-    parity=serial.PARITY_ODD, 
-    stopbits=serial.STOPBITS_ONE, 
-    bytesize=serial.SEVENBITS, 
-    timeout=0
-)
-except:
-    print('\nCant connect to port {}'.format(port))
-    exit(0)
-
-count = 0
-while not serial_conn.is_open:
-    sleep(0.1)
-    if count == 10:
-        print('\nTimed out')
-        exit(0)
-
-print('\nConnection established') 
-
-if serial_conn.is_open:
-    try:
-        data = "J0V0D0dfb0000B0000T000A00"
-    except Exception as e:
-        print(e)
+connect_to_serial(baudrate, data)
 
 pygame.init()
 # sizes =  pygame.display.get_desktop_sizes()
@@ -190,9 +34,6 @@ countdown_start = False
 last_score = 0
 last_result = ''
 mode = 1
-
-serial_thread = threading.Thread(target=read_serial, args=(serial_conn,))
-serial_thread.start()
 
 sea = pygame.image.load('graphics/Mar.png')
 landscape = pygame.image.load(f'graphics/Landscape{mode - 1}.png')
@@ -311,7 +152,7 @@ while True:
         tapa_buraco3_x = buracos_x[tapa_buraco_index[2]]
         tapa_buraco4_x = buracos_x[tapa_buraco_index[3]]
 
-        nivel_da_agua = nivel_agua()
+        nivel_da_agua = nivel_agua(data)
         if (nivel_da_agua >= 255):
             game_active = False
             last_score = current_score
@@ -334,27 +175,18 @@ while True:
                 last_result = ''
 
         ## Screens
-        screen.blit(sea, (0, 0))
-        screen.blit(barco_jogo, (0, height/5.4))
-        screen.blit(buraco1, (buraco1_x, buraco_y))
-        screen.blit(buraco2, (buraco2_x, buraco_y))
-        screen.blit(buraco3, (buraco3_x, buraco_y))
-        screen.blit(buraco4, (buraco4_x, buraco_y))
-        screen.blit(tapa_buraco1, (tapa_buraco1_x, tapa_buraco_y))
-        screen.blit(tapa_buraco2, (tapa_buraco2_x, tapa_buraco_y))
-        screen.blit(tapa_buraco3, (tapa_buraco3_x, tapa_buraco_y))
-        screen.blit(tapa_buraco4, (tapa_buraco4_x, tapa_buraco_y))
-        screen.blit(landscape, (0, 0))
+        update_screens_game_active(screen, sea, barco_jogo, buraco1, buraco1_x, buraco_y, buraco2, buraco2_x, buraco3, buraco3_x, buraco4, buraco4_x, tapa_buraco1, tapa_buraco1_x, tapa_buraco_y, tapa_buraco2, tapa_buraco2_x, tapa_buraco3, tapa_buraco3_x, tapa_buraco4, tapa_buraco4_x, landscape, height)
         if mode == 3:
-            lightning_x, raio_time, last_raio_time = animacao_raio(lightning, raio_time, last_raio_time)
-        current_score, game_active, last_score, current_time, last_result = display_score(nivel_agua)
+            lightning_x, raio_time, last_raio_time = animacao_raio(lightning, raio_time, last_raio_time, pygame.time.get_ticks(), screen)
+        current_score, game_active, last_score, current_time, last_result = display_score(nivel_da_agua, screen, pygame.time.get_ticks(), current_score, game_active, last_score, current_time, last_result, start_score, mode, game_font, width, height, data)
 
     else:
+        stop_music()
         screen.blit(sea, (0, 0))
         if last_result == 'v':
             screen.blit(barcoVitoria, (width/4.8, height/10.8))
             screen.blit(textoVitoria, (width/2.6, height/108))
-            baloes(height/9 - 5*i)
+            baloes(height/9 - 5*i, width, balao, screen)
             if i < height/2:
                 i += 1
             else:
@@ -368,6 +200,21 @@ while True:
         if last_score:
             score_surface = game_font.render(f'{last_score} pts', True, '#ffffff')
             screen.blit(score_surface, (1300, 10))
+
+            # Se houver um resultado e a pontuação for maior que zero, pergunte ao jogador pelo nome
+            if last_result and last_score > 0:
+                player_name = input_player_name(screen, clock)
+                if player_name:
+                    # Adicione nome e pontuação ao leaderboard
+                    append_leaderboard(player_name, last_score, DEFAULT_LEADERBOARD_PATH)
+                    print("Pontuação adicionada ao leaderboard!")
+                    leaderboard = fetch_leaderboard(DEFAULT_LEADERBOARD_PATH)
+                    print_leaderboard(leaderboard)
+                    exit_leaderboard = show_leaderboard(screen, clock, leaderboard, data)
+                    
+                    if exit_leaderboard:
+                        continue
+
         current_score = 0
         barco_surface, barco_menu_index = animacao_barco(barco_menu_index, barco_menu)
         start_time = int(pygame.time.get_ticks()/1000)
@@ -385,6 +232,8 @@ while True:
                 mode = 2
             else: # data [7] == 'f'
                 mode = 1
+            load_music(mode)
+            play_music()
             landscape = pygame.image.load(f'graphics/Landscape{mode - 1}.png')
             start_time_game, game_active, countdown_start = countdown(screen)
 

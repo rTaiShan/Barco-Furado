@@ -34,7 +34,7 @@ def print_leaderboard(leaderboard):
     for entry in leaderboard:
         # f-string para formatar float com 2 pontos decimais
         print(f"{entry['name']} - {entry['score']:.2f}")
-
+                
 def example():
     print("Leaderboard at start:")
     print_leaderboard(fetch_leaderboard())
