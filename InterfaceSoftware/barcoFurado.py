@@ -72,7 +72,7 @@ def countdown(screen):
         sleep(0.077)
     count_rect = count_surface.get_rect(center = (width/2.4, height/1.89))
     screen.blit(count_surface, count_rect)
-    countdown = int(pygame.time.get_ticks()/1000) 
+    start_time_game = int(pygame.time.get_ticks()/1000) 
     return [start_time_game, game_active, countdown_start]
 
 def animacao_barco(index, barco_menu):
