@@ -50,7 +50,7 @@ architecture tb of circuito_semana_1_tb_1 is
 
   -- Configuracoes do clock
   signal keep_simulating : std_logic := '0'; -- delimita o tempo de geracao do clock
-  constant clockPeriod   : time := 20 ns;
+  constant clockPeriod   : time := 1 ms;
   
   -- Identificacao de casos de teste
   signal caso : integer := 0;
@@ -118,7 +118,7 @@ begin
     -- Teste 3 (tampa o buraco)
 	caso <= 3;
 	s_botoes <= "0001";
-	wait for 1200 ms;
+	wait for 20 sec;
 	
 
     ---- final dos casos de teste  da simulacao
