@@ -31,7 +31,7 @@ def display_score(nivel_da_agua, screen):
     else:
         percentage_color = 'red'
 
-    current_time = int(data[19:22], 16)
+    current_time = int(data[19:22], 16) * 32 / 1000
     if(current_time < 10):
         current_score += int((2-percentage/100)*(int(pygame.time.get_ticks()/13)*mode - start_score)/100)
         time_surface = game_font.render(f'00:0{current_time}', True, '#ffffff')
@@ -95,24 +95,27 @@ def animacao_raio(lightning, raio_time, last_raio_time):
     return [lightning_x, raio_time, last_raio_time]
 
 # J.V.D.d.b....B....T...A..\0
-def read_serial(game_end, serial_conn):
-    global data
+def read_serial(serial_conn):
+    global game_end, data
     ## Update condition
     while True:
         if game_end:
             break
 
         if serial_conn.is_open:
-            try:  
-                data = serial_conn.readline().decode().strip()
-            except BaseException as e:
-                print(e)
+            read_data = serial_conn.read_all()
+            try:
+                data = re.findall(b'J[01]V[01]D[01]d[nfd]b[01]{4}B[01]{4}T[0-9, A-F]{3}A[0-9, A-F]{2}\x00', read_data)[-1].decode()
+                print(data)
+            except IndexError:
+                pass
 
 ####################
 ## Serial treatment
 ####################
 
 global data
+data = "J0V0D0dfb0000B0000T000A00"
 baudrate = 115200
 
 def search_for_ports():
@@ -138,7 +141,14 @@ else:
     port = search_for_ports()[0].device
 
 try:
-    serial_conn = serial.Serial(port, baudrate)
+    serial_conn = serial.Serial(
+    port,
+    baudrate, 
+    parity=serial.PARITY_ODD, 
+    stopbits=serial.STOPBITS_ONE, 
+    bytesize=serial.SEVENBITS, 
+    timeout=0
+)
 except:
     print('\nCant connect to port {}'.format(port))
     exit(0)
@@ -154,8 +164,8 @@ print('\nConnection established')
 
 if serial_conn.is_open:
     try:
-        data = serial_conn.readline().decode().strip()
-    except BaseException as e:
+        data = "J0V0D0dfb0000B0000T000A00"
+    except Exception as e:
         print(e)
 
 pygame.init()
