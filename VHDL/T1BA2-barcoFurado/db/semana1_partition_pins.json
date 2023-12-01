@@ -36,6 +36,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "vitoria_led",
+					"strict" : false
+				},
+				{
 					"name" : "derrota_led",
 					"strict" : false
 				},

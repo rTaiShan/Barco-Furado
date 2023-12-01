@@ -1,5 +1,5 @@
 Analysis & Synthesis report for semana1
-Mon Nov 20 10:16:08 2023
+Fri Dec 01 13:33:39 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,7 +14,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |circuito_wrapper|wrapper_uc:uc|Eatual
-  9. State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_uc:U1_UC|Eatual
+  9. State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_uc:U1_UC|Eatual
  10. State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC|Eatual
  11. State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc|Eatual
  12. Registers Removed During Synthesis
@@ -29,43 +29,45 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  21. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_1
  22. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_2
  23. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s
- 24. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|contador_m:seletor
- 25. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1
- 26. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2
- 27. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK
- 28. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator
- 29. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0
- 30. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0
- 31. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1
- 32. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1
- 33. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2
- 34. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2
- 35. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3
- 36. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3
- 37. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3"
- 38. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2"
- 39. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1"
- 40. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0"
- 41. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator"
- 42. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK"
- 43. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2"
- 44. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1"
- 45. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx"
- 46. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|contador_m:seletor"
- 47. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX"
- 48. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s"
- 49. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_2"
- 50. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_1"
- 51. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador"
- 52. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA"
- 53. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR"
- 54. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO"
- 55. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal"
- 56. Port Connectivity Checks: "wrapper_df:df|contador_inicializacao:contagem_regressiva"
- 57. Port Connectivity Checks: "wrapper_df:df"
- 58. Post-Synthesis Netlist Statistics for Top Partition
- 59. Elapsed Time Per Partition
- 60. Analysis & Synthesis Messages
+ 24. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:gera_partida
+ 25. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:seletor
+ 26. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1
+ 27. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2
+ 28. Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|contador_m_n:U3_TICK
+ 29. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator
+ 30. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0
+ 31. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0
+ 32. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1
+ 33. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1
+ 34. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2
+ 35. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2
+ 36. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3
+ 37. Parameter Settings for User Entity Instance: wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3
+ 38. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3"
+ 39. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2"
+ 40. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1"
+ 41. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0"
+ 42. Port Connectivity Checks: "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator"
+ 43. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|contador_m_n:U3_TICK"
+ 44. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2"
+ 45. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1"
+ 46. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx"
+ 47. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:seletor"
+ 48. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:gera_partida"
+ 49. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX"
+ 50. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s"
+ 51. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_2"
+ 52. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_1"
+ 53. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador"
+ 54. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA"
+ 55. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR"
+ 56. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO"
+ 57. Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal"
+ 58. Port Connectivity Checks: "wrapper_df:df|contador_inicializacao:contagem_regressiva"
+ 59. Port Connectivity Checks: "wrapper_df:df"
+ 60. Post-Synthesis Netlist Statistics for Top Partition
+ 61. Elapsed Time Per Partition
+ 62. Analysis & Synthesis Messages
 
 
 
@@ -92,13 +94,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 20 10:16:08 2023       ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 01 13:33:39 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; semana1                                     ;
 ; Top-level Entity Name           ; circuito_wrapper                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 339                                         ;
+; Total registers                 ; 361                                         ;
 ; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -254,6 +256,8 @@ https://fpgasoftware.intel.com/eula.
 ; tx_serial_7O1.vhd                ; yes             ; User VHDL File  ; C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1.vhd        ;         ;
 ; tx_serial_7O1_fd.vhd             ; yes             ; User VHDL File  ; C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1_fd.vhd     ;         ;
 ; tx_serial_uc.vhd                 ; yes             ; User VHDL File  ; C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_uc.vhd         ;         ;
+; transmissor_uc.vhd               ; yes             ; User VHDL File  ; C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_uc.vhd       ;         ;
+; transmissor_df.vhd               ; yes             ; User VHDL File  ; C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_df.vhd       ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -262,82 +266,85 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 456         ;
+; Estimate of Logic utilization (ALMs needed) ; 475         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 773         ;
-;     -- 7 input functions                    ; 11          ;
-;     -- 6 input functions                    ; 126         ;
-;     -- 5 input functions                    ; 54          ;
+; Combinational ALUT usage for logic          ; 806         ;
+;     -- 7 input functions                    ; 10          ;
+;     -- 6 input functions                    ; 132         ;
+;     -- 5 input functions                    ; 53          ;
 ;     -- 4 input functions                    ; 125         ;
-;     -- <=3 input functions                  ; 457         ;
+;     -- <=3 input functions                  ; 486         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 339         ;
+; Dedicated logic registers                   ; 361         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 44          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 317         ;
-; Total fan-out                               ; 3946        ;
+; Maximum fan-out                             ; 339         ;
+; Total fan-out                               ; 4125        ;
 ; Average fan-out                             ; 3.29        ;
 +---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                 ;
-+-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Entity Name            ; Library Name ;
-+-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |circuito_wrapper                                     ; 773 (1)             ; 339 (0)                   ; 0                 ; 0          ; 44   ; 0            ; |circuito_wrapper                                                                                                                                          ; circuito_wrapper       ; work         ;
-;    |wrapper_df:df|                                    ; 767 (5)             ; 334 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df                                                                                                                            ; wrapper_df             ; work         ;
-;       |circuito_semana_1:circuito_principal|          ; 368 (0)             ; 195 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal                                                                                       ; circuito_semana_1      ; work         ;
-;          |dataflow:DF|                                ; 238 (0)             ; 157 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF                                                                           ; dataflow               ; work         ;
-;             |busca_buracos:BUSCA_FUROS|               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|busca_buracos:BUSCA_FUROS                                                 ; busca_buracos          ; work         ;
-;             |contador_custom:CONTA_AGUA|              ; 44 (44)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA                                                ; contador_custom        ; work         ;
-;             |contador_m:TICK_GENERATOR|               ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR                                                 ; contador_m             ; work         ;
-;             |contador_m:tick_generator_2s|            ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s                                              ; contador_m             ; work         ;
-;             |contador_m_n:CONTA_TEMPO|                ; 15 (15)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO                                                  ; contador_m_n           ; work         ;
-;             |edge_detector:edge_detector_buzzer_en|   ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|edge_detector:edge_detector_buzzer_en                                     ; edge_detector          ; work         ;
-;             |gera_buracos:gerador|                    ; 68 (1)              ; 52 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador                                                      ; gera_buracos           ; work         ;
-;                |gera_buracos_df:df|                   ; 64 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df                                   ; gera_buracos_df        ; work         ;
-;                   |contador_dificuldade:conta_buraco| ; 34 (34)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_dificuldade:conta_buraco ; contador_dificuldade   ; work         ;
-;                   |contador_m:contador_1|             ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_1             ; contador_m             ; work         ;
-;                   |contador_m:contador_2|             ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_2             ; contador_m             ; work         ;
-;                   |move_buraco:movedor|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|move_buraco:movedor               ; move_buraco            ; work         ;
-;                   |registrador_n:registrador|         ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|registrador_n:registrador         ; registrador_n          ; work         ;
-;                |gera_buracos_uc:uc|                   ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc                                   ; gera_buracos_uc        ; work         ;
-;             |gerador_sons:gerador_som|                ; 43 (43)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gerador_sons:gerador_som                                                  ; gerador_sons           ; work         ;
-;          |hexa7seg:HEX_Estado|                        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Estado                                                                   ; hexa7seg               ; work         ;
-;          |hexa7seg:HEX_Nivel_Agua_0|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Nivel_Agua_0                                                             ; hexa7seg               ; work         ;
-;          |hexa7seg:HEX_Nivel_Agua_1|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Nivel_Agua_1                                                             ; hexa7seg               ; work         ;
-;          |transmissor:TX|                             ; 100 (41)            ; 33 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX                                                                        ; transmissor            ; work         ;
-;             |contador_m:seletor|                      ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|contador_m:seletor                                                     ; contador_m             ; work         ;
-;             |hex_ascii_decoder:decoder_agua0|         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_agua0                                        ; hex_ascii_decoder      ; work         ;
-;             |hex_ascii_decoder:decoder_agua1|         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_agua1                                        ; hex_ascii_decoder      ; work         ;
-;             |hex_ascii_decoder:decoder_tempo0|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_tempo0                                       ; hex_ascii_decoder      ; work         ;
-;             |hex_ascii_decoder:decoder_tempo1|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_tempo1                                       ; hex_ascii_decoder      ; work         ;
-;             |hex_ascii_decoder:decoder_tempo2|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_tempo2                                       ; hex_ascii_decoder      ; work         ;
-;             |tx_serial_7O1:tx|                        ; 34 (0)              ; 28 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx                                                       ; tx_serial_7O1          ; work         ;
-;                |contador_m_n:U3_TICK|                 ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK                                  ; contador_m_n           ; work         ;
-;                |tx_serial_7O1_fd:U2_FD|               ; 17 (1)              ; 14 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD                                ; tx_serial_7O1_fd       ; work         ;
-;                   |contador_m_n:U2|                   ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2                ; contador_m_n           ; work         ;
-;                   |deslocador_n:U1|                   ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1                ; deslocador_n           ; work         ;
-;                |tx_serial_uc:U1_UC|                   ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_uc:U1_UC                                    ; tx_serial_uc           ; work         ;
-;          |unidade_controle:UC|                        ; 11 (11)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC                                                                   ; unidade_controle       ; work         ;
-;       |contador_inicializacao:contagem_regressiva|    ; 66 (66)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|contador_inicializacao:contagem_regressiva                                                                                 ; contador_inicializacao ; work         ;
-;       |controle_buraco:controle_buraco_pwm|           ; 328 (0)             ; 111 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm                                                                                        ; controle_buraco        ; work         ;
-;          |circuito_pwm_generic:pwm_0|                 ; 88 (88)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0                                                             ; circuito_pwm_generic   ; work         ;
-;          |circuito_pwm_generic:pwm_1|                 ; 64 (64)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1                                                             ; circuito_pwm_generic   ; work         ;
-;          |circuito_pwm_generic:pwm_2|                 ; 64 (64)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2                                                             ; circuito_pwm_generic   ; work         ;
-;          |circuito_pwm_generic:pwm_3|                 ; 65 (65)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3                                                             ; circuito_pwm_generic   ; work         ;
-;          |contador_custom:contador_0|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0                                                             ; contador_custom        ; work         ;
-;          |contador_custom:contador_1|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1                                                             ; contador_custom        ; work         ;
-;          |contador_custom:contador_2|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2                                                             ; contador_custom        ; work         ;
-;          |contador_custom:contador_3|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3                                                             ; contador_custom        ; work         ;
-;          |contador_m:tick_generator|                  ; 23 (23)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator                                                              ; contador_m             ; work         ;
-;    |wrapper_uc:uc|                                    ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_uc:uc                                                                                                                            ; wrapper_uc             ; work         ;
-+-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                    ;
++-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                           ; Entity Name            ; Library Name ;
++-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |circuito_wrapper                                     ; 806 (1)             ; 361 (0)                   ; 0                 ; 0          ; 44   ; 0            ; |circuito_wrapper                                                                                                                                             ; circuito_wrapper       ; work         ;
+;    |wrapper_df:df|                                    ; 800 (6)             ; 356 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df                                                                                                                               ; wrapper_df             ; work         ;
+;       |circuito_semana_1:circuito_principal|          ; 400 (0)             ; 217 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal                                                                                          ; circuito_semana_1      ; work         ;
+;          |dataflow:DF|                                ; 239 (0)             ; 157 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF                                                                              ; dataflow               ; work         ;
+;             |busca_buracos:BUSCA_FUROS|               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|busca_buracos:BUSCA_FUROS                                                    ; busca_buracos          ; work         ;
+;             |contador_custom:CONTA_AGUA|              ; 45 (45)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA                                                   ; contador_custom        ; work         ;
+;             |contador_m:TICK_GENERATOR|               ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR                                                    ; contador_m             ; work         ;
+;             |contador_m:tick_generator_2s|            ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s                                                 ; contador_m             ; work         ;
+;             |contador_m_n:CONTA_TEMPO|                ; 15 (15)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO                                                     ; contador_m_n           ; work         ;
+;             |edge_detector:edge_detector_buzzer_en|   ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|edge_detector:edge_detector_buzzer_en                                        ; edge_detector          ; work         ;
+;             |gera_buracos:gerador|                    ; 68 (1)              ; 52 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador                                                         ; gera_buracos           ; work         ;
+;                |gera_buracos_df:df|                   ; 64 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df                                      ; gera_buracos_df        ; work         ;
+;                   |contador_dificuldade:conta_buraco| ; 34 (34)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_dificuldade:conta_buraco    ; contador_dificuldade   ; work         ;
+;                   |contador_m:contador_1|             ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_1                ; contador_m             ; work         ;
+;                   |contador_m:contador_2|             ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|contador_m:contador_2                ; contador_m             ; work         ;
+;                   |move_buraco:movedor|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|move_buraco:movedor                  ; move_buraco            ; work         ;
+;                   |registrador_n:registrador|         ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|registrador_n:registrador            ; registrador_n          ; work         ;
+;                |gera_buracos_uc:uc|                   ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc                                      ; gera_buracos_uc        ; work         ;
+;             |gerador_sons:gerador_som|                ; 43 (43)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gerador_sons:gerador_som                                                     ; gerador_sons           ; work         ;
+;          |hexa7seg:HEX_Estado|                        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Estado                                                                      ; hexa7seg               ; work         ;
+;          |hexa7seg:HEX_Nivel_Agua_0|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Nivel_Agua_0                                                                ; hexa7seg               ; work         ;
+;          |hexa7seg:HEX_Nivel_Agua_1|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Nivel_Agua_1                                                                ; hexa7seg               ; work         ;
+;          |transmissor:TX|                             ; 131 (0)             ; 55 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX                                                                           ; transmissor            ; work         ;
+;             |transmissor_df:df|                       ; 129 (41)            ; 54 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df                                                         ; transmissor_df         ; work         ;
+;                |contador_m:gera_partida|              ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:gera_partida                                 ; contador_m             ; work         ;
+;                |contador_m:seletor|                   ; 8 (8)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:seletor                                      ; contador_m             ; work         ;
+;                |hex_ascii_decoder:decoder_agua0|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|hex_ascii_decoder:decoder_agua0                         ; hex_ascii_decoder      ; work         ;
+;                |hex_ascii_decoder:decoder_agua1|      ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|hex_ascii_decoder:decoder_agua1                         ; hex_ascii_decoder      ; work         ;
+;                |hex_ascii_decoder:decoder_tempo0|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|hex_ascii_decoder:decoder_tempo0                        ; hex_ascii_decoder      ; work         ;
+;                |hex_ascii_decoder:decoder_tempo1|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|hex_ascii_decoder:decoder_tempo1                        ; hex_ascii_decoder      ; work         ;
+;                |hex_ascii_decoder:decoder_tempo2|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|hex_ascii_decoder:decoder_tempo2                        ; hex_ascii_decoder      ; work         ;
+;                |tx_serial_7O1:tx|                     ; 34 (0)              ; 28 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx                                        ; tx_serial_7O1          ; work         ;
+;                   |contador_m_n:U3_TICK|              ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|contador_m_n:U3_TICK                   ; contador_m_n           ; work         ;
+;                   |tx_serial_7O1_fd:U2_FD|            ; 17 (1)              ; 14 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD                 ; tx_serial_7O1_fd       ; work         ;
+;                      |contador_m_n:U2|                ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2 ; contador_m_n           ; work         ;
+;                      |deslocador_n:U1|                ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1 ; deslocador_n           ; work         ;
+;                   |tx_serial_uc:U1_UC|                ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_uc:U1_UC                     ; tx_serial_uc           ; work         ;
+;             |transmissor_uc:uc|                       ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_uc:uc                                                         ; transmissor_uc         ; work         ;
+;          |unidade_controle:UC|                        ; 11 (11)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC                                                                      ; unidade_controle       ; work         ;
+;       |contador_inicializacao:contagem_regressiva|    ; 66 (66)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|contador_inicializacao:contagem_regressiva                                                                                    ; contador_inicializacao ; work         ;
+;       |controle_buraco:controle_buraco_pwm|           ; 328 (0)             ; 111 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm                                                                                           ; controle_buraco        ; work         ;
+;          |circuito_pwm_generic:pwm_0|                 ; 88 (88)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0                                                                ; circuito_pwm_generic   ; work         ;
+;          |circuito_pwm_generic:pwm_1|                 ; 64 (64)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1                                                                ; circuito_pwm_generic   ; work         ;
+;          |circuito_pwm_generic:pwm_2|                 ; 64 (64)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2                                                                ; circuito_pwm_generic   ; work         ;
+;          |circuito_pwm_generic:pwm_3|                 ; 65 (65)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3                                                                ; circuito_pwm_generic   ; work         ;
+;          |contador_custom:contador_0|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0                                                                ; contador_custom        ; work         ;
+;          |contador_custom:contador_1|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1                                                                ; contador_custom        ; work         ;
+;          |contador_custom:contador_2|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2                                                                ; contador_custom        ; work         ;
+;          |contador_custom:contador_3|                 ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3                                                                ; contador_custom        ; work         ;
+;          |contador_m:tick_generator|                  ; 23 (23)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator                                                                 ; contador_m             ; work         ;
+;    |wrapper_uc:uc|                                    ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |circuito_wrapper|wrapper_uc:uc                                                                                                                               ; wrapper_uc             ; work         ;
++-------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -356,17 +363,17 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_uc:U1_UC|Eatual ;
-+--------------------+--------------+--------------------+---------------+-------------------+---------------------------------------------------+
-; Name               ; Eatual.final ; Eatual.transmissao ; Eatual.espera ; Eatual.preparacao ; Eatual.inicial                                    ;
-+--------------------+--------------+--------------------+---------------+-------------------+---------------------------------------------------+
-; Eatual.inicial     ; 0            ; 0                  ; 0             ; 0                 ; 0                                                 ;
-; Eatual.preparacao  ; 0            ; 0                  ; 0             ; 1                 ; 1                                                 ;
-; Eatual.espera      ; 0            ; 0                  ; 1             ; 0                 ; 1                                                 ;
-; Eatual.transmissao ; 0            ; 1                  ; 0             ; 0                 ; 1                                                 ;
-; Eatual.final       ; 1            ; 0                  ; 0             ; 0                 ; 1                                                 ;
-+--------------------+--------------+--------------------+---------------+-------------------+---------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_uc:U1_UC|Eatual ;
++--------------------+--------------+--------------------+---------------+-------------------+---------------------------------------------------------------------+
+; Name               ; Eatual.final ; Eatual.transmissao ; Eatual.espera ; Eatual.preparacao ; Eatual.inicial                                                      ;
++--------------------+--------------+--------------------+---------------+-------------------+---------------------------------------------------------------------+
+; Eatual.inicial     ; 0            ; 0                  ; 0             ; 0                 ; 0                                                                   ;
+; Eatual.preparacao  ; 0            ; 0                  ; 0             ; 1                 ; 1                                                                   ;
+; Eatual.espera      ; 0            ; 0                  ; 1             ; 0                 ; 1                                                                   ;
+; Eatual.transmissao ; 0            ; 1                  ; 0             ; 0                 ; 1                                                                   ;
+; Eatual.final       ; 1            ; 0                  ; 0             ; 0                 ; 1                                                                   ;
++--------------------+--------------+--------------------+---------------+-------------------+---------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -395,86 +402,86 @@ Encoding Type:  One-Hot
 +----------------+--------------+---------------+-------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                         ;
-+----------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-; Register name                                                                                                                    ; Reason for Removal                                                                                      ;
-+----------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[0,2,17..19]                             ; Stuck at GND due to stuck port data_in                                                                  ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[0,2,17..19]                             ; Stuck at GND due to stuck port data_in                                                                  ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[0,2,17..19]                             ; Stuck at GND due to stuck port data_in                                                                  ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[0,2,17..19]                             ; Stuck at GND due to stuck port data_in                                                                  ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[1]                                      ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[1]                                      ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[3] ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[1]                                      ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[3] ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[1]                                      ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[3] ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[19]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[19]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[19]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[19]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[19]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[19]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[18]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[18]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[18]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[18]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[18]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[18]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[17]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[17]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[17]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[17]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[17]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[17]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[16]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[16]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[16]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[16]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[16]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[16]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[15]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[15]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[15]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[15]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[15]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[15]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[14]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[14]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[14]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[14]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[14]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[14]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[13]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[13]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[13]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[13]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[13]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[13]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[12]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[12]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[12]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[12]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[12]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[12]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[11]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[11]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[11]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[11]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[11]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[11]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[10]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[10]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[10]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[10]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[10]                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[10]   ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[9]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[9]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[9]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[9]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[9]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[9]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[8]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[8]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[8]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[8]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[8]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[8]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[7]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[7]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[7]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[7]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[7]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[7]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[6]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[6]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[6]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[6]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[6]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[6]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[5]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[5]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[5]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[5]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[5]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[5]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[4]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[4]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[4]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[4]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[4]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[4]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[3]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[3]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[3]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[3]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[3]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[3]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[2]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[2]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[2]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[2]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[2]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[2]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[1]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[1]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[1]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[1]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[1]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[1]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[0]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[0]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[0]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[0]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[0]                                         ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[0]    ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[3]                                      ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[3]                                      ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[3]                                      ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[10] ; Stuck at VCC due to stuck port data_in                                                                  ;
-; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3]                                      ; Stuck at GND due to stuck port data_in                                                                  ;
-; Total Number of Removed Registers = 89                                                                                           ;                                                                                                         ;
-+----------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                                           ;
++----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                                                      ; Reason for Removal                                                                                      ;
++----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[0,2,17..19]                                               ; Stuck at GND due to stuck port data_in                                                                  ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[0,2,17..19]                                               ; Stuck at GND due to stuck port data_in                                                                  ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[0,2,17..19]                                               ; Stuck at GND due to stuck port data_in                                                                  ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[0,2,17..19]                                               ; Stuck at GND due to stuck port data_in                                                                  ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[1]                                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[1]                                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[3] ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[1]                                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[3] ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[1]                                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[3] ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[19]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[19]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[19]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[19]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[19]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[19]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[18]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[18]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[18]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[18]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[18]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[18]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[17]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[17]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[17]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[17]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[17]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[17]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[16]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[16]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[16]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[16]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[16]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[16]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[15]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[15]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[15]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[15]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[15]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[15]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[14]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[14]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[14]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[14]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[14]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[14]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[13]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[13]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[13]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[13]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[13]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[13]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[12]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[12]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[12]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[12]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[12]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[12]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[11]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[11]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[11]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[11]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[11]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[11]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[10]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[10]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[10]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[10]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[10]                                                          ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[10]   ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[9]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[9]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[9]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[9]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[9]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[9]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[8]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[8]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[8]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[8]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[8]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[8]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[7]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[7]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[7]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[7]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[7]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[7]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[6]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[6]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[6]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[6]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[6]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[6]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[5]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[5]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[5]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[5]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[5]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[5]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[4]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[4]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[4]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[4]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[4]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[4]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[3]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[3]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[3]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[3]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[3]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[3]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[2]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[2]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[2]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[2]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[2]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[2]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[1]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[1]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[1]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[1]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[1]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[1]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|contagem[0]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[0]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|contagem[0]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[0]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|contagem[0]                                                           ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|contagem[0]    ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_1|largura_pwm[3]                                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_2|largura_pwm[3]                                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[3]                                                        ; Merged with wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[10] ; Stuck at VCC due to stuck port data_in                                                                  ;
+; wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3]                                                        ; Stuck at GND due to stuck port data_in                                                                  ;
+; Total Number of Removed Registers = 89                                                                                                             ;                                                                                                         ;
++----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -482,56 +489,58 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 339   ;
-; Number of registers using Synchronous Clear  ; 221   ;
+; Total registers                              ; 361   ;
+; Number of registers using Synchronous Clear  ; 242   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 260   ;
+; Number of registers using Asynchronous Clear ; 282   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 78    ;
+; Number of registers using Clock Enable       ; 79    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                                                                              ;
-+---------------------------------------------------------------------------------------------------------------------------------+---------+
-; Inverted Register                                                                                                               ; Fan out ;
-+---------------------------------------------------------------------------------------------------------------------------------+---------+
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[0] ; 2       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[1] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[2] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[3] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[4] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[5] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[6] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[7] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[8] ; 1       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[9] ; 1       ;
-; Total number of inverted registers = 10                                                                                         ;         ;
-+---------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                 ; Fan out ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[0] ; 2       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[1] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[2] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[3] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[4] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[5] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[6] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[7] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[8] ; 1       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[9] ; 1       ;
+; Total number of inverted registers = 10                                                                                                           ;         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK|IQ[8]                           ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2|IQ[0]         ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0|IQ[0]                                                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1|IQ[0]                                                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2|IQ[0]                                                      ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3|IQ[1]                                                      ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA|IQ[2]                                         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[1]         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[2]         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc|Eprox.inicial                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|move_buraco:movedor|s_del_pos[1] ;
-; 32:1               ; 2 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|Mux4                                                                  ;
-; 32:1               ; 2 bits    ; 42 LEs        ; 26 LEs               ; 16 LEs                 ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|Mux5                                                                  ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_uc:uc|Eprox.inicial                                                                                                             ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC|Eprox.inicializa_elementos                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|contador_m_n:U3_TICK|IQ[0]                   ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:gera_partida|IQ[18]                                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2|IQ[0] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:seletor|IQ[4]                                      ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0|IQ[0]                                                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_1|IQ[1]                                                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_2|IQ[0]                                                                ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_3|IQ[3]                                                                ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA|IQ[8]                                                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1|IQ[8] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc|Eprox.inicial                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_df:df|move_buraco:movedor|s_del_pos[2]           ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|Mux4                                                          ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 26 LEs               ; 16 LEs                 ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|Mux5                                                          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_uc:uc|Eprox.joga                                                                                                                          ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC|Eprox.inicializa_elementos                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -617,45 +626,55 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|contador_m:seletor ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------+
-; m              ; 26    ; Signed Integer                                                                                           ;
-+----------------+-------+----------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:gera_partida ;
++----------------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                                                                          ;
++----------------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+; m              ; 1600000 ; Signed Integer                                                                                                                ;
++----------------+---------+-------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:seletor ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                       ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+; m              ; 26    ; Signed Integer                                                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; n              ; 11    ; Signed Integer                                                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                            ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; m              ; 12    ; Signed Integer                                                                                                                                                  ;
+; n              ; 4     ; Signed Integer                                                                                                                                                  ;
++----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1 ;
+; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|contador_m_n:U3_TICK ;
 +----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                                                                          ;
 +----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; n              ; 11    ; Signed Integer                                                                                                                                ;
+; m              ; 434   ; Signed Integer                                                                                                                                ;
+; n              ; 13    ; Signed Integer                                                                                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2 ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                                          ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; m              ; 12    ; Signed Integer                                                                                                                                ;
-; n              ; 4     ; Signed Integer                                                                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------+
-; m              ; 434   ; Signed Integer                                                                                                              ;
-; n              ; 13    ; Signed Integer                                                                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -821,60 +840,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK" ;
-+-------+--------+----------+---------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                 ;
-+-------+--------+----------+---------------------------------------------------------------------------------------------------------+
-; conta ; Input  ; Info     ; Stuck at VCC                                                                                            ;
-; q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                     ;
-; meio  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                     ;
-+-------+--------+----------+---------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2" ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                    ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
-; meio ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                        ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|contador_m_n:U3_TICK" ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                   ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; conta ; Input  ; Info     ; Stuck at VCC                                                                                                              ;
+; q     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; meio  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1" ;
-+----------------+--------+----------+------------------------------------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                                                          ;
-+----------------+--------+----------+------------------------------------------------------------------------------------------------------------------+
-; entrada_serial ; Input  ; Info     ; Stuck at VCC                                                                                                     ;
-; dados[10]      ; Input  ; Info     ; Stuck at VCC                                                                                                     ;
-; dados[1]       ; Input  ; Info     ; Stuck at GND                                                                                                     ;
-; dados[0]       ; Input  ; Info     ; Stuck at VCC                                                                                                     ;
-; saida[10..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                              ;
-+----------------+--------+----------+------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2" ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; meio ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx"       ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; partida    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; db_clock   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; db_tick    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; db_partida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1" ;
++----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                                            ;
++----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------+
+; entrada_serial ; Input  ; Info     ; Stuck at VCC                                                                                                                       ;
+; dados[10]      ; Input  ; Info     ; Stuck at VCC                                                                                                                       ;
+; dados[1]       ; Input  ; Info     ; Stuck at GND                                                                                                                       ;
+; dados[0]       ; Input  ; Info     ; Stuck at VCC                                                                                                                       ;
+; saida[10..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                ;
++----------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|contador_m:seletor" ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; zera_s ; Input  ; Info     ; Stuck at GND                                                                        ;
-; meio   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx" ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                         ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------+
+; db_clock   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.             ;
+; db_tick    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.             ;
+; db_partida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.             ;
++------------+--------+----------+-------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:seletor" ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                 ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------+
+; meio ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:gera_partida" ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                      ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                          ;
+; meio ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                          ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -883,7 +910,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port            ; Type   ; Severity ; Details                                                                             ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; db_saida_serial ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; fim_transmissao ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1002,30 +1028,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 339                         ;
+; arriav_ff             ; 361                         ;
 ;     CLR               ; 46                          ;
-;     CLR SCLR          ; 136                         ;
-;     ENA CLR           ; 70                          ;
+;     CLR SCLR          ; 157                         ;
+;     ENA CLR           ; 71                          ;
 ;     ENA CLR SCLR      ; 8                           ;
 ;     SCLR              ; 77                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 778                         ;
-;     arith             ; 239                         ;
-;         1 data inputs ; 239                         ;
-;     extend            ; 11                          ;
-;         7 data inputs ; 11                          ;
-;     normal            ; 528                         ;
+; arriav_lcell_comb     ; 811                         ;
+;     arith             ; 260                         ;
+;         1 data inputs ; 260                         ;
+;     extend            ; 10                          ;
+;         7 data inputs ; 10                          ;
+;     normal            ; 541                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 83                          ;
-;         3 data inputs ; 132                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 88                          ;
+;         3 data inputs ; 138                         ;
 ;         4 data inputs ; 125                         ;
-;         5 data inputs ; 54                          ;
-;         6 data inputs ; 126                         ;
+;         5 data inputs ; 53                          ;
+;         6 data inputs ; 132                         ;
 ; boundary_port         ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.07                        ;
+; Average LUT depth     ; 3.04                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1044,7 +1070,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 20 10:16:00 2023
+    Info: Processing started: Fri Dec 01 13:33:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off semana1 -c semana1
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file gerador_sons.vhd
@@ -1138,7 +1164,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file hex_asc
     Info (12022): Found design unit 1: hex_ascii_decoder-behavioral File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/hex_ascii_decoder.vhd Line: 11
     Info (12023): Found entity 1: hex_ascii_decoder File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/hex_ascii_decoder.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file transmissor.vhd
-    Info (12022): Found design unit 1: transmissor-behavioral File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 24
+    Info (12022): Found design unit 1: transmissor-behavioral File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 23
     Info (12023): Found entity 1: transmissor File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file deslocador_n.vhd
     Info (12022): Found design unit 1: deslocador_n-deslocador_n_arch File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/deslocador_n.vhd Line: 34
@@ -1152,14 +1178,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file tx_seri
 Info (12021): Found 2 design units, including 1 entities, in source file tx_serial_uc.vhd
     Info (12022): Found design unit 1: tx_serial_uc-tx_serial_uc_arch File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_uc.vhd Line: 35
     Info (12023): Found entity 1: tx_serial_uc File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_uc.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file transmissor_uc.vhd
+    Info (12022): Found design unit 1: transmissor_uc-behave File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_uc.vhd Line: 17
+    Info (12023): Found entity 1: transmissor_uc File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_uc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file transmissor_df.vhd
+    Info (12022): Found design unit 1: transmissor_df-behavioral File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_df.vhd Line: 33
+    Info (12023): Found entity 1: transmissor_df File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_df.vhd Line: 6
 Info (12127): Elaborating entity "circuito_wrapper" for the top level hierarchy
 Info (12128): Elaborating entity "wrapper_df" for hierarchy "wrapper_df:df" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_wrapper.vhd Line: 81
 Info (12128): Elaborating entity "contador_inicializacao" for hierarchy "wrapper_df:df|contador_inicializacao:contagem_regressiva" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/wrapper_df.vhd Line: 107
 Info (12128): Elaborating entity "circuito_semana_1" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/wrapper_df.vhd Line: 119
-Warning (10541): VHDL Signal Declaration warning at circuito_semana_1.vhd(26): used implicit default value for signal "vitoria" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 26
-Warning (10541): VHDL Signal Declaration warning at circuito_semana_1.vhd(27): used implicit default value for signal "derrota" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 27
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Estado" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 147
-Info (12128): Elaborating entity "dataflow" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 165
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|hexa7seg:HEX_Estado" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 146
+Info (12128): Elaborating entity "dataflow" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 164
 Info (12128): Elaborating entity "contador_m_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m_n:CONTA_TEMPO" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 145
 Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 169
 Info (12128): Elaborating entity "contador_custom" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_custom:CONTA_AGUA" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 184
@@ -1184,16 +1214,18 @@ Info (12128): Elaborating entity "gera_buracos_uc" for hierarchy "wrapper_df:df|
 Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 226
 Info (12128): Elaborating entity "edge_detector" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|edge_detector:edge_detector_buzzer_en" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 240
 Info (12128): Elaborating entity "gerador_sons" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gerador_sons:gerador_som" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/dataflow.vhd Line: 248
-Info (12128): Elaborating entity "unidade_controle" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 193
-Info (12128): Elaborating entity "transmissor" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 216
-Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|contador_m:seletor" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 85
-Info (12128): Elaborating entity "tx_serial_7O1" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 99
-Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_uc:U1_UC" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1.vhd Line: 97
-Info (12128): Elaborating entity "tx_serial_7O1_fd" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1.vhd Line: 112
-Info (12128): Elaborating entity "deslocador_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1_fd.vhd Line: 83
-Info (12128): Elaborating entity "contador_m_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1_fd.vhd Line: 97
-Info (12128): Elaborating entity "contador_m_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|contador_m_n:U3_TICK" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1.vhd Line: 129
-Info (12128): Elaborating entity "hex_ascii_decoder" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|hex_ascii_decoder:decoder_tempo2" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 179
+Info (12128): Elaborating entity "unidade_controle" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 192
+Info (12128): Elaborating entity "transmissor" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_semana_1.vhd Line: 215
+Info (12128): Elaborating entity "transmissor_uc" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_uc:uc" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 68
+Info (12128): Elaborating entity "transmissor_df" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor.vhd Line: 80
+Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|contador_m:seletor" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_df.vhd Line: 109
+Info (12128): Elaborating entity "tx_serial_7O1" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_df.vhd Line: 123
+Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_uc:U1_UC" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1.vhd Line: 97
+Info (12128): Elaborating entity "tx_serial_7O1_fd" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1.vhd Line: 112
+Info (12128): Elaborating entity "deslocador_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|deslocador_n:U1" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1_fd.vhd Line: 83
+Info (12128): Elaborating entity "contador_m_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|tx_serial_7O1_fd:U2_FD|contador_m_n:U2" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1_fd.vhd Line: 97
+Info (12128): Elaborating entity "contador_m_n" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|tx_serial_7O1:tx|contador_m_n:U3_TICK" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/tx_serial_7O1.vhd Line: 129
+Info (12128): Elaborating entity "hex_ascii_decoder" for hierarchy "wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|transmissor_df:df|hex_ascii_decoder:decoder_tempo2" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/transmissor_df.vhd Line: 204
 Info (12128): Elaborating entity "controle_buraco" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/wrapper_df.vhd Line: 142
 Info (12128): Elaborating entity "contador_m" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_m:tick_generator" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 74
 Info (12128): Elaborating entity "contador_custom" for hierarchy "wrapper_df:df|controle_buraco:controle_buraco_pwm|contador_custom:contador_0" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/controle_buraco.vhd Line: 89
@@ -1264,20 +1296,19 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[5]" is converted into an equivalent circuit using register "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[5]~_emulated" and latch "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[5]~45" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_pwm_generic.vhd Line: 63
     Warning (13310): Register "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[4]" is converted into an equivalent circuit using register "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[4]~_emulated" and latch "wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_3|largura_pwm[4]~49" File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_pwm_generic.vhd Line: 63
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "vitoria_led" is stuck at GND File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_wrapper.vhd Line: 15
     Warning (13410): Pin "db_estado[2]" is stuck at GND File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_wrapper.vhd Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register wrapper_df:df|controle_buraco:controle_buraco_pwm|circuito_pwm_generic:pwm_0|largura_pwm[3] will power up to High File: C:/Users/rault/OneDrive/Documents/USP/MA2/Labdig2/Barco-Furado/VHDL/T1BA2-barcoFurado/circuito_pwm_generic.vhd Line: 63
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 819 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 852 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 775 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Mon Nov 20 10:16:08 2023
+    Info (21061): Implemented 808 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Fri Dec 01 13:33:39 2023
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:17
 

@@ -1,5 +1,5 @@
 Timing Analyzer report for semana1
-Mon Nov 20 10:16:56 2023
+Fri Dec 01 13:34:30 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -102,16 +102,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.50        ;
+; Average used               ; 1.51        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;  10.6%      ;
 ;     Processor 3            ;  10.4%      ;
-;     Processor 4            ;  10.4%      ;
-;     Processor 5            ;   9.5%      ;
-;     Processor 6            ;   9.5%      ;
+;     Processor 4            ;  10.3%      ;
+;     Processor 5            ;   9.6%      ;
+;     Processor 6            ;   9.6%      ;
 +----------------------------+-------------+
 
 
@@ -132,9 +132,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+---------------------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                                        ; Note ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------+------+
-; 126.77 MHz ; 126.77 MHz      ; clock                                                                                             ;      ;
-; 209.82 MHz ; 209.82 MHz      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ;      ;
-; 524.93 MHz ; 524.93 MHz      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ;      ;
+; 126.2 MHz  ; 126.2 MHz       ; clock                                                                                             ;      ;
+; 201.65 MHz ; 201.65 MHz      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ;      ;
+; 499.75 MHz ; 499.75 MHz      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ;      ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,23 +150,23 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; clock                                                                                             ; -6.888 ; -1232.517     ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -4.848 ; -109.765      ;
-; reset                                                                                             ; -4.045 ; -154.510      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.056 ; -2.961        ;
+; clock                                                                                             ; -6.924 ; -1355.355     ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -4.323 ; -122.198      ;
+; reset                                                                                             ; -4.115 ; -132.689      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -1.758 ; -2.759        ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                                                                        ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                                             ; Slack ; End Point TNS ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; clock                                                                                             ; 0.351 ; 0.000         ;
-; reset                                                                                             ; 0.485 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.530 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.869 ; 0.000         ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                                                         ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; clock                                                                                             ; -0.002 ; -0.002        ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.531  ; 0.000         ;
+; reset                                                                                             ; 0.617  ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.927  ; 0.000         ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -174,9 +174,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -4.325 ; -8.649        ;
-; clock                                                                                             ; -3.228 ; -697.223      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -2.720 ; -58.685       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -4.163 ; -8.325        ;
+; clock                                                                                             ; -3.169 ; -748.955      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -2.634 ; -81.656       ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -185,9 +185,9 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
-; clock                                                                                             ; 0.819 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 1.008 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2.717 ; 0.000         ;
+; clock                                                                                             ; 0.954 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 1.802 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2.331 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -196,10 +196,10 @@ HTML report is unavailable in plain text report export.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; clock                                                                                             ; -0.538 ; -295.493      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -0.538 ; -27.694       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.538 ; -1.592        ;
-; reset                                                                                             ; -0.160 ; -2.032        ;
+; clock                                                                                             ; -0.538 ; -317.009      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -0.538 ; -25.839       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.538 ; -1.599        ;
+; reset                                                                                             ; -0.036 ; -0.051        ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -214,9 +214,9 @@ No synchronizer chains to report.
 +------------+-----------------+---------------------------------------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                                                        ; Note ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------+------+
-; 129.45 MHz ; 129.45 MHz      ; clock                                                                                             ;      ;
-; 210.7 MHz  ; 210.7 MHz       ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ;      ;
-; 520.56 MHz ; 520.56 MHz      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ;      ;
+; 128.29 MHz ; 128.29 MHz      ; clock                                                                                             ;      ;
+; 201.53 MHz ; 201.53 MHz      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ;      ;
+; 501.76 MHz ; 501.76 MHz      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ;      ;
 +------------+-----------------+---------------------------------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -226,23 +226,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; clock                                                                                             ; -6.725 ; -1211.674     ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -5.041 ; -111.392      ;
-; reset                                                                                             ; -4.089 ; -159.952      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.191 ; -3.112        ;
+; clock                                                                                             ; -6.795 ; -1331.396     ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -4.414 ; -119.012      ;
+; reset                                                                                             ; -4.248 ; -142.003      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -1.841 ; -2.834        ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                                                                         ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                                             ; Slack ; End Point TNS ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; clock                                                                                             ; 0.095 ; 0.000         ;
-; reset                                                                                             ; 0.468 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.561 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.837 ; 0.000         ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                                                          ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; clock                                                                                             ; -0.297 ; -0.589        ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.561  ; 0.000         ;
+; reset                                                                                             ; 0.643  ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.898  ; 0.000         ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -250,9 +250,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -4.291 ; -8.581        ;
-; clock                                                                                             ; -3.000 ; -647.571      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -2.810 ; -62.222       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -4.078 ; -8.155        ;
+; clock                                                                                             ; -2.913 ; -684.757      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -2.666 ; -83.312       ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -261,9 +261,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
-; clock                                                                                             ; 0.765 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 1.116 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2.568 ; 0.000         ;
+; clock                                                                                             ; 0.888 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 1.909 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2.140 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -272,10 +272,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; clock                                                                                             ; -0.538 ; -302.489      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -0.538 ; -28.076       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.538 ; -1.592        ;
-; reset                                                                                             ; -0.129 ; -1.868        ;
+; clock                                                                                             ; -0.538 ; -325.876      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -0.538 ; -26.133       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.538 ; -1.648        ;
+; reset                                                                                             ; 0.024  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -290,23 +290,23 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; clock                                                                                             ; -3.490 ; -470.916      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -2.057 ; -43.189       ;
-; reset                                                                                             ; -1.661 ; -57.995       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.901 ; -1.024        ;
+; clock                                                                                             ; -3.533 ; -509.890      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -1.923 ; -55.333       ;
+; reset                                                                                             ; -1.797 ; -44.533       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.858 ; -1.061        ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                                                                        ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                                             ; Slack ; End Point TNS ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.163 ; 0.000         ;
-; clock                                                                                             ; 0.179 ; 0.000         ;
-; reset                                                                                             ; 0.213 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.356 ; 0.000         ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                                                         ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; clock                                                                                             ; -0.004 ; -0.004        ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.162  ; 0.000         ;
+; reset                                                                                             ; 0.286  ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.401  ; 0.000         ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -314,9 +314,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.591 ; -5.181        ;
-; clock                                                                                             ; -1.801 ; -346.661      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -1.223 ; -21.785       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.581 ; -5.161        ;
+; clock                                                                                             ; -1.751 ; -369.885      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -1.155 ; -33.377       ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -325,9 +325,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
-; clock                                                                                             ; 0.356 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.648 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 1.278 ; 0.000         ;
+; clock                                                                                             ; 0.451 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.987 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 1.188 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -336,10 +336,10 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; reset                                                                                             ; -0.329 ; -25.043       ;
-; clock                                                                                             ; -0.101 ; -35.645       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -0.054 ; -0.823        ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.058  ; 0.000         ;
+; reset                                                                                             ; -0.184 ; -11.749       ;
+; clock                                                                                             ; -0.101 ; -37.245       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.001  ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.072  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -354,23 +354,23 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; clock                                                                                             ; -2.964 ; -392.626      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -1.951 ; -39.072       ;
-; reset                                                                                             ; -1.461 ; -50.882       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.887 ; -0.948        ;
+; clock                                                                                             ; -2.990 ; -423.166      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -1.795 ; -48.341       ;
+; reset                                                                                             ; -1.596 ; -39.884       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -0.815 ; -0.945        ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                                                                         ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; Clock                                                                                             ; Slack ; End Point TNS ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
-; clock                                                                                             ; 0.014 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.148 ; 0.000         ;
-; reset                                                                                             ; 0.238 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.316 ; 0.000         ;
-+---------------------------------------------------------------------------------------------------+-------+---------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                                                                          ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                                             ; Slack  ; End Point TNS ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
+; clock                                                                                             ; -0.211 ; -0.440        ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.148  ; 0.000         ;
+; reset                                                                                             ; 0.344  ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.359  ; 0.000         ;
++---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -378,9 +378,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.426 ; -4.851        ;
-; clock                                                                                             ; -1.558 ; -295.176      ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -1.151 ; -21.676       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.374 ; -4.747        ;
+; clock                                                                                             ; -1.487 ; -316.110      ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -1.098 ; -32.244       ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -389,9 +389,9 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                                             ; Slack ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
-; clock                                                                                             ; 0.313 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.679 ; 0.000         ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 1.178 ; 0.000         ;
+; clock                                                                                             ; 0.321 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.988 ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 1.085 ; 0.000         ;
 +---------------------------------------------------------------------------------------------------+-------+---------------+
 
 
@@ -400,10 +400,10 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                                             ; Slack  ; End Point TNS ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
-; reset                                                                                             ; -0.261 ; -20.591       ;
-; clock                                                                                             ; -0.100 ; -36.096       ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -0.015 ; -0.116        ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.074  ; 0.000         ;
+; reset                                                                                             ; -0.145 ; -8.764        ;
+; clock                                                                                             ; -0.099 ; -38.293       ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 0.037  ; 0.000         ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 0.096  ; 0.000         ;
 +---------------------------------------------------------------------------------------------------+--------+---------------+
 
 
@@ -413,22 +413,22 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                                               ;
-+----------------------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Clock                                                                                              ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+----------------------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                                                   ; -6.888    ; 0.014 ; -4.325   ; 0.313   ; -0.538              ;
-;  clock                                                                                             ; -6.888    ; 0.014 ; -3.228   ; 0.313   ; -0.538              ;
-;  reset                                                                                             ; -4.089    ; 0.213 ; N/A      ; N/A     ; -0.329              ;
-;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -5.041    ; 0.148 ; -2.810   ; 0.648   ; -0.538              ;
-;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.191    ; 0.316 ; -4.325   ; 1.178   ; -0.538              ;
-; Design-wide TNS                                                                                    ; -1499.753 ; 0.0   ; -764.557 ; 0.0     ; -334.025            ;
-;  clock                                                                                             ; -1232.517 ; 0.000 ; -697.223 ; 0.000   ; -302.489            ;
-;  reset                                                                                             ; -159.952  ; 0.000 ; N/A      ; N/A     ; -25.043             ;
-;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -111.392  ; 0.000 ; -62.222  ; 0.000   ; -28.076             ;
-;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -3.112    ; 0.000 ; -8.649   ; 0.000   ; -1.592              ;
-+----------------------------------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                                                ;
++----------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Clock                                                                                              ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                                                                   ; -6.924    ; -0.297 ; -4.163   ; 0.321   ; -0.538              ;
+;  clock                                                                                             ; -6.924    ; -0.297 ; -3.169   ; 0.321   ; -0.538              ;
+;  reset                                                                                             ; -4.248    ; 0.286  ; N/A      ; N/A     ; -0.184              ;
+;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -4.414    ; 0.148  ; -2.666   ; 0.987   ; -0.538              ;
+;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -1.841    ; 0.359  ; -4.163   ; 1.085   ; -0.538              ;
+; Design-wide TNS                                                                                    ; -1613.001 ; -0.589 ; -838.936 ; 0.0     ; -353.657            ;
+;  clock                                                                                             ; -1355.355 ; -0.589 ; -748.955 ; 0.000   ; -325.876            ;
+;  reset                                                                                             ; -142.003  ; 0.000  ; N/A      ; N/A     ; -11.749             ;
+;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; -122.198  ; 0.000  ; -83.312  ; 0.000   ; -26.133             ;
+;  wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; -2.834    ; 0.000  ; -8.325   ; 0.000   ; -1.648              ;
++----------------------------------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -668,7 +668,7 @@ No synchronizer chains to report.
 +---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                                        ; To Clock                                                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
-; clock                                                                                             ; clock                                                                                             ; 12136    ; 0        ; 0        ; 0        ;
+; clock                                                                                             ; clock                                                                                             ; 13277    ; 0        ; 0        ; 0        ;
 ; reset                                                                                             ; clock                                                                                             ; 136      ; 324      ; 0        ; 0        ;
 ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; clock                                                                                             ; 56       ; 54       ; 0        ; 0        ;
 ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; clock                                                                                             ; 394      ; 42       ; 0        ; 0        ;
@@ -676,7 +676,7 @@ No synchronizer chains to report.
 ; clock                                                                                             ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2        ; 0        ; 0        ; 0        ;
 ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 1        ; 0        ; 0        ; 0        ;
 ; clock                                                                                             ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 305      ; 0        ; 0        ; 0        ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 666      ; 0        ; 0        ; 0        ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 732      ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -686,7 +686,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                                                        ; To Clock                                                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
-; clock                                                                                             ; clock                                                                                             ; 12136    ; 0        ; 0        ; 0        ;
+; clock                                                                                             ; clock                                                                                             ; 13277    ; 0        ; 0        ; 0        ;
 ; reset                                                                                             ; clock                                                                                             ; 136      ; 324      ; 0        ; 0        ;
 ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; clock                                                                                             ; 56       ; 54       ; 0        ; 0        ;
 ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; clock                                                                                             ; 394      ; 42       ; 0        ; 0        ;
@@ -694,7 +694,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clock                                                                                             ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2        ; 0        ; 0        ; 0        ;
 ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 1        ; 0        ; 0        ; 0        ;
 ; clock                                                                                             ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 305      ; 0        ; 0        ; 0        ;
-; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 666      ; 0        ; 0        ; 0        ;
+; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 732      ; 0        ; 0        ; 0        ;
 +---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -704,11 +704,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
-; clock      ; clock                                                                                             ; 292      ; 0        ; 0        ; 0        ;
-; reset      ; clock                                                                                             ; 208      ; 208      ; 0        ; 0        ;
+; clock      ; clock                                                                                             ; 313      ; 0        ; 0        ; 0        ;
+; reset      ; clock                                                                                             ; 230      ; 230      ; 0        ; 0        ;
 ; clock      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2        ; 0        ; 0        ; 0        ;
 ; reset      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2        ; 2        ; 0        ; 0        ;
-; clock      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 30       ; 0        ; 0        ; 0        ;
+; clock      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 33       ; 0        ; 0        ; 0        ;
 +------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -718,11 +718,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
-; clock      ; clock                                                                                             ; 292      ; 0        ; 0        ; 0        ;
-; reset      ; clock                                                                                             ; 208      ; 208      ; 0        ; 0        ;
+; clock      ; clock                                                                                             ; 313      ; 0        ; 0        ; 0        ;
+; reset      ; clock                                                                                             ; 230      ; 230      ; 0        ; 0        ;
 ; clock      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2        ; 0        ; 0        ; 0        ;
 ; reset      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] ; 2        ; 2        ; 0        ; 0        ;
-; clock      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 30       ; 0        ; 0        ; 0        ;
+; clock      ; wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]    ; 33       ; 0        ; 0        ; 0        ;
 +------------+---------------------------------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -748,8 +748,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 8     ; 8    ;
 ; Unconstrained Input Port Paths  ; 112   ; 112  ;
-; Unconstrained Output Ports      ; 33    ; 33   ;
-; Unconstrained Output Port Paths ; 239   ; 239  ;
+; Unconstrained Output Ports      ; 34    ; 34   ;
+; Unconstrained Output Port Paths ; 247   ; 247  ;
 +---------------------------------+-------+------+
 
 
@@ -819,6 +819,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; nivel_agua_1[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nivel_agua_1[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; saida_serial    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; vitoria_led     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-----------------+---------------------------------------------------------------------------------------+
 
 
@@ -876,6 +877,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; nivel_agua_1[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; nivel_agua_1[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; saida_serial    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; vitoria_led     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-----------------+---------------------------------------------------------------------------------------+
 
 
@@ -885,7 +887,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 20 10:16:52 2023
+    Info: Processing started: Fri Dec 01 13:34:25 2023
 Info: Command: quartus_sta semana1 -c semana1
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -905,160 +907,160 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.888
+Info (332146): Worst-case setup slack is -6.924
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.888           -1232.517 clock 
-    Info (332119):    -4.848            -109.765 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):    -4.045            -154.510 reset 
-    Info (332119):    -2.056              -2.961 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case hold slack is 0.351
+    Info (332119):    -6.924           -1355.355 clock 
+    Info (332119):    -4.323            -122.198 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):    -4.115            -132.689 reset 
+    Info (332119):    -1.758              -2.759 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case hold slack is -0.002
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.351               0.000 clock 
-    Info (332119):     0.485               0.000 reset 
-    Info (332119):     0.530               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     0.869               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case recovery slack is -4.325
+    Info (332119):    -0.002              -0.002 clock 
+    Info (332119):     0.531               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     0.617               0.000 reset 
+    Info (332119):     0.927               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case recovery slack is -4.163
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.325              -8.649 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-    Info (332119):    -3.228            -697.223 clock 
-    Info (332119):    -2.720             -58.685 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-Info (332146): Worst-case removal slack is 0.819
+    Info (332119):    -4.163              -8.325 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):    -3.169            -748.955 clock 
+    Info (332119):    -2.634             -81.656 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+Info (332146): Worst-case removal slack is 0.954
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.819               0.000 clock 
-    Info (332119):     1.008               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     2.717               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):     0.954               0.000 clock 
+    Info (332119):     1.802               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     2.331               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538            -295.493 clock 
-    Info (332119):    -0.538             -27.694 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):    -0.538              -1.592 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-    Info (332119):    -0.160              -2.032 reset 
+    Info (332119):    -0.538            -317.009 clock 
+    Info (332119):    -0.538             -25.839 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):    -0.538              -1.599 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):    -0.036              -0.051 reset 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.725
+Info (332146): Worst-case setup slack is -6.795
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.725           -1211.674 clock 
-    Info (332119):    -5.041            -111.392 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):    -4.089            -159.952 reset 
-    Info (332119):    -2.191              -3.112 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case hold slack is 0.095
+    Info (332119):    -6.795           -1331.396 clock 
+    Info (332119):    -4.414            -119.012 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):    -4.248            -142.003 reset 
+    Info (332119):    -1.841              -2.834 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case hold slack is -0.297
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.095               0.000 clock 
-    Info (332119):     0.468               0.000 reset 
+    Info (332119):    -0.297              -0.589 clock 
     Info (332119):     0.561               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     0.837               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case recovery slack is -4.291
+    Info (332119):     0.643               0.000 reset 
+    Info (332119):     0.898               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case recovery slack is -4.078
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.291              -8.581 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-    Info (332119):    -3.000            -647.571 clock 
-    Info (332119):    -2.810             -62.222 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-Info (332146): Worst-case removal slack is 0.765
+    Info (332119):    -4.078              -8.155 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):    -2.913            -684.757 clock 
+    Info (332119):    -2.666             -83.312 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+Info (332146): Worst-case removal slack is 0.888
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.765               0.000 clock 
-    Info (332119):     1.116               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     2.568               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):     0.888               0.000 clock 
+    Info (332119):     1.909               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     2.140               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538            -302.489 clock 
-    Info (332119):    -0.538             -28.076 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):    -0.538              -1.592 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-    Info (332119):    -0.129              -1.868 reset 
+    Info (332119):    -0.538            -325.876 clock 
+    Info (332119):    -0.538             -26.133 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):    -0.538              -1.648 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):     0.024               0.000 reset 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.490
+Info (332146): Worst-case setup slack is -3.533
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.490            -470.916 clock 
-    Info (332119):    -2.057             -43.189 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):    -1.661             -57.995 reset 
-    Info (332119):    -0.901              -1.024 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case hold slack is 0.163
+    Info (332119):    -3.533            -509.890 clock 
+    Info (332119):    -1.923             -55.333 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):    -1.797             -44.533 reset 
+    Info (332119):    -0.858              -1.061 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case hold slack is -0.004
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.163               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     0.179               0.000 clock 
-    Info (332119):     0.213               0.000 reset 
-    Info (332119):     0.356               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case recovery slack is -2.591
+    Info (332119):    -0.004              -0.004 clock 
+    Info (332119):     0.162               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     0.286               0.000 reset 
+    Info (332119):     0.401               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case recovery slack is -2.581
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.591              -5.181 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-    Info (332119):    -1.801            -346.661 clock 
-    Info (332119):    -1.223             -21.785 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-Info (332146): Worst-case removal slack is 0.356
+    Info (332119):    -2.581              -5.161 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):    -1.751            -369.885 clock 
+    Info (332119):    -1.155             -33.377 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+Info (332146): Worst-case removal slack is 0.451
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.356               0.000 clock 
-    Info (332119):     0.648               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     1.278               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.329
+    Info (332119):     0.451               0.000 clock 
+    Info (332119):     0.987               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     1.188               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.184
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.329             -25.043 reset 
-    Info (332119):    -0.101             -35.645 clock 
-    Info (332119):    -0.054              -0.823 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     0.058               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):    -0.184             -11.749 reset 
+    Info (332119):    -0.101             -37.245 clock 
+    Info (332119):     0.001               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     0.072               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.964
+Info (332146): Worst-case setup slack is -2.990
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.964            -392.626 clock 
-    Info (332119):    -1.951             -39.072 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):    -1.461             -50.882 reset 
-    Info (332119):    -0.887              -0.948 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case hold slack is 0.014
+    Info (332119):    -2.990            -423.166 clock 
+    Info (332119):    -1.795             -48.341 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):    -1.596             -39.884 reset 
+    Info (332119):    -0.815              -0.945 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case hold slack is -0.211
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.014               0.000 clock 
+    Info (332119):    -0.211              -0.440 clock 
     Info (332119):     0.148               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     0.238               0.000 reset 
-    Info (332119):     0.316               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case recovery slack is -2.426
+    Info (332119):     0.344               0.000 reset 
+    Info (332119):     0.359               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case recovery slack is -2.374
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.426              -4.851 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-    Info (332119):    -1.558            -295.176 clock 
-    Info (332119):    -1.151             -21.676 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-Info (332146): Worst-case removal slack is 0.313
+    Info (332119):    -2.374              -4.747 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):    -1.487            -316.110 clock 
+    Info (332119):    -1.098             -32.244 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+Info (332146): Worst-case removal slack is 0.321
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.313               0.000 clock 
-    Info (332119):     0.679               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     1.178               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
-Info (332146): Worst-case minimum pulse width slack is -0.261
+    Info (332119):     0.321               0.000 clock 
+    Info (332119):     0.988               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     1.085               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+Info (332146): Worst-case minimum pulse width slack is -0.145
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.261             -20.591 reset 
-    Info (332119):    -0.100             -36.096 clock 
-    Info (332119):    -0.015              -0.116 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
-    Info (332119):     0.074               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
+    Info (332119):    -0.145              -8.764 reset 
+    Info (332119):    -0.099             -38.293 clock 
+    Info (332119):     0.037               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0] 
+    Info (332119):     0.096               0.000 wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5108 megabytes
-    Info: Processing ended: Mon Nov 20 10:16:56 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 5112 megabytes
+    Info: Processing ended: Fri Dec 01 13:34:30 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 
 

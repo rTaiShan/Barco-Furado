@@ -132,8 +132,7 @@ architecture comportamental of circuito_semana_1 is
 		contador_tempo : in std_logic_vector(11 downto 0);
 		contador_agua : in std_logic_vector(7 downto 0);
 		saida_serial : out std_logic;
-		db_saida_serial : out std_logic;
-		fim_transmissao : out std_logic
+		db_saida_serial : out std_logic
 	);
 end component;
 
@@ -226,8 +225,10 @@ begin
 		contador_tempo => s_contador_tempo,
 		contador_agua => s_contador_agua,
 		saida_serial => saida_serial,
-		db_saida_serial => open,
-		fim_transmissao => open
+		db_saida_serial => open
 	);
+	
+	vitoria <= s_vitoria;
+	derrota <= s_derrota;
 
 end architecture;
