@@ -153,7 +153,7 @@ begin
 			--M => 3000000000,
 			--N => 33
 			--M => 625,  -- Versão de debug tick - período de 32 ms (10 segundos)
-			M => 3750, -- período de 32 ms (1 minuto)
+			M => 1875, -- período de 32 ms (1 minuto)
 			N => 12
 			)
 		port map(

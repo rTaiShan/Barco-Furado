@@ -129,6 +129,7 @@ begin
     U3_TICK: contador_m_n 
              generic map (
                  M => 434, -- 115200 bauds
+					  --M => 5208,
                  N => 13
              ) 
              port map (

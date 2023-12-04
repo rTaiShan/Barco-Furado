@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "buracos_led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_pwm[0]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_pwm[1]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_pwm[2]",
+					"strict" : false
+				},
+				{
+					"name" : "buracos_pwm[3]",
+					"strict" : false
+				},
+				{
+					"name" : "derrota_led",
+					"strict" : false
+				},
+				{
+					"name" : "buzzer_i",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[4]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[5]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[6]",
+					"strict" : false
+				},
+				{
+					"name" : "db_clock",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "nivel_agua_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "db_saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "jogar",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[2]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dificuldade[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dificuldade[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

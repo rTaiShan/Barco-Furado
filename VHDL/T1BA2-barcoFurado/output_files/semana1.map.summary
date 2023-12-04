@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Dec 01 13:33:39 2023
+Analysis & Synthesis Status : Successful - Fri Dec 01 15:46:14 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : semana1
 Top-level Entity Name : circuito_wrapper
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 361
+Total registers : 360
 Total pins : 44
 Total virtual pins : 0
 Total block memory bits : 0

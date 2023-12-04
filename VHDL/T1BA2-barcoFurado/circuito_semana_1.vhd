@@ -18,6 +18,7 @@ entity circuito_semana_1 is
 		clock            : in  std_logic;
 		reset            : in  std_logic;
 		iniciar          : in  std_logic;
+		jogar            : in  std_logic;
 		dificuldade	 : in  std_logic_vector(1 downto 0);
 		botoes           : in  std_logic_vector(3 downto 0);
 		buracos_in 	 : in  std_logic_vector(3 downto 0);
@@ -216,7 +217,7 @@ begin
 	port map(
 		clock => clock,
 		reset => reset,
-		jogar => iniciar,
+		jogar => jogar,
 		vitoria => s_vitoria,
 		derrota => s_derrota,
 		dificuldade => dificuldade,

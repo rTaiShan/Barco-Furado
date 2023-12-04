@@ -1,0 +1,30 @@
+
+State Machine - |circuito_wrapper|wrapper_uc:uc|Eatual
+Name Eatual.joga Eatual.inicia Eatual.reseta Eatual.aguarda_contagem Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 
+Eatual.aguarda_contagem 0 0 0 1 1 
+Eatual.reseta 0 0 1 0 1 
+Eatual.inicia 0 1 0 0 1 
+Eatual.joga 1 0 0 0 1 
+
+State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|transmissor:TX|tx_serial_7O1:tx|tx_serial_uc:U1_UC|Eatual
+Name Eatual.final Eatual.transmissao Eatual.espera Eatual.preparacao Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 
+Eatual.preparacao 0 0 0 1 1 
+Eatual.espera 0 0 1 0 1 
+Eatual.transmissao 0 1 0 0 1 
+Eatual.final 1 0 0 0 1 
+
+State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|unidade_controle:UC|Eatual
+Name Eatual.final_derrota Eatual.final_vitoria Eatual.em_jogo Eatual.inicializa_elementos Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 
+Eatual.inicializa_elementos 0 0 0 1 1 
+Eatual.em_jogo 0 0 1 0 1 
+Eatual.final_vitoria 0 1 0 0 1 
+Eatual.final_derrota 1 0 0 0 1 
+
+State Machine - |circuito_wrapper|wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|gera_buracos:gerador|gera_buracos_uc:uc|Eatual
+Name Eatual.e_add Eatual.e_move Eatual.inicial 
+Eatual.inicial 0 0 0 
+Eatual.e_move 0 1 1 
+Eatual.e_add 1 0 1 

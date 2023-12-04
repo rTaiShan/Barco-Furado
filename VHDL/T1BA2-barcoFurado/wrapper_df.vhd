@@ -6,6 +6,7 @@ entity wrapper_df is
 		clock        : in  std_logic;
 		reset 		 : in  std_logic;
 		iniciar      : in  std_logic;
+		jogar        : in  std_logic;
 		botoes       : in  std_logic_vector(3 downto 0);
 		dificuldade	 : in  std_logic_vector(1 downto 0);
 		
@@ -57,6 +58,7 @@ component circuito_semana_1 is
 		clock            : in  std_logic;
 		reset            : in  std_logic;
 		iniciar          : in  std_logic;
+		jogar            : in  std_logic;
 		dificuldade	 : in  std_logic_vector(1 downto 0);
 		botoes           : in  std_logic_vector(3 downto 0);
 		buracos_in 	 : in  std_logic_vector(3 downto 0);
@@ -121,6 +123,7 @@ circuito_principal : circuito_semana_1
 		clock => clock,
 		reset => reset,
 		iniciar => iniciar,
+		jogar => jogar,
 		dificuldade => s_dificuldade,
 		botoes => botoes,
 		buracos_in => "0000",

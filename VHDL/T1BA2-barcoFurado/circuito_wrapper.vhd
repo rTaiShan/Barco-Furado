@@ -49,6 +49,7 @@ architecture comportamental of circuito_wrapper is
 			clock : in std_logic;
 			reset : in std_logic;
 			iniciar : in std_logic;
+			jogar   : in std_logic;
 			botoes : in std_logic_vector(3 downto 0);
 			dificuldade : in std_logic_vector(1 downto 0);
 
@@ -83,6 +84,7 @@ begin
 		clock => clock,
 		reset => s_reseta_dataflow,
 		iniciar => s_inicia_jogo,
+		jogar => jogar,
 		botoes => botoes,
 		dificuldade => dificuldade,
 

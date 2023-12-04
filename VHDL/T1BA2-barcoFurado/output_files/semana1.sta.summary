@@ -3,291 +3,291 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -6.924
-TNS   : -1355.355
+Slack : -7.049
+TNS   : -1421.390
 
 Type  : Slow 1100mV 85C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -4.323
-TNS   : -122.198
+Slack : -4.912
+TNS   : -106.327
 
 Type  : Slow 1100mV 85C Model Setup 'reset'
-Slack : -4.115
-TNS   : -132.689
+Slack : -3.436
+TNS   : -145.142
 
 Type  : Slow 1100mV 85C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -1.758
-TNS   : -2.759
+Slack : -1.689
+TNS   : -3.041
 
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : -0.002
-TNS   : -0.002
+Slack : -0.344
+TNS   : -0.509
+
+Type  : Slow 1100mV 85C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : 0.516
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.531
+Slack : 0.533
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'reset'
-Slack : 0.617
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 0.927
+Slack : 0.716
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -4.163
-TNS   : -8.325
+Slack : -3.794
+TNS   : -7.545
 
 Type  : Slow 1100mV 85C Model Recovery 'clock'
-Slack : -3.169
-TNS   : -748.955
+Slack : -3.150
+TNS   : -741.258
 
 Type  : Slow 1100mV 85C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -2.634
-TNS   : -81.656
+Slack : -2.517
+TNS   : -49.379
 
 Type  : Slow 1100mV 85C Model Removal 'clock'
-Slack : 0.954
+Slack : 0.988
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 1.802
+Slack : 1.341
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 2.331
+Slack : 1.874
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
 Slack : -0.538
-TNS   : -317.009
+TNS   : -319.365
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
 Slack : -0.538
-TNS   : -25.839
+TNS   : -21.910
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
 Slack : -0.538
-TNS   : -1.599
+TNS   : -1.838
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'reset'
-Slack : -0.036
-TNS   : -0.051
+Slack : -0.035
+TNS   : -0.073
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -6.795
-TNS   : -1331.396
+Slack : -6.872
+TNS   : -1399.428
 
 Type  : Slow 1100mV 0C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -4.414
-TNS   : -119.012
+Slack : -4.961
+TNS   : -103.877
 
 Type  : Slow 1100mV 0C Model Setup 'reset'
-Slack : -4.248
-TNS   : -142.003
+Slack : -3.649
+TNS   : -153.194
 
 Type  : Slow 1100mV 0C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -1.841
-TNS   : -2.834
+Slack : -1.813
+TNS   : -3.142
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : -0.297
-TNS   : -0.589
+Slack : -0.574
+TNS   : -2.098
 
 Type  : Slow 1100mV 0C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.561
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'reset'
-Slack : 0.643
+Slack : 0.564
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 0.898
+Slack : 0.615
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'reset'
+Slack : 0.757
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -4.078
-TNS   : -8.155
+Slack : -3.772
+TNS   : -7.512
 
 Type  : Slow 1100mV 0C Model Recovery 'clock'
-Slack : -2.913
-TNS   : -684.757
+Slack : -2.896
+TNS   : -676.841
 
 Type  : Slow 1100mV 0C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -2.666
-TNS   : -83.312
+Slack : -2.567
+TNS   : -52.493
 
 Type  : Slow 1100mV 0C Model Removal 'clock'
-Slack : 0.888
+Slack : 0.938
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 1.909
+Slack : 1.491
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 2.140
+Slack : 1.699
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
 Slack : -0.538
-TNS   : -325.876
+TNS   : -328.265
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
 Slack : -0.538
-TNS   : -26.133
+TNS   : -21.367
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
 Slack : -0.538
-TNS   : -1.648
+TNS   : -1.812
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'reset'
-Slack : 0.024
+Slack : 0.027
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -3.533
-TNS   : -509.890
+Slack : -3.567
+TNS   : -541.215
 
 Type  : Fast 1100mV 85C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -1.923
-TNS   : -55.333
+Slack : -2.349
+TNS   : -48.149
 
 Type  : Fast 1100mV 85C Model Setup 'reset'
-Slack : -1.797
-TNS   : -44.533
+Slack : -1.249
+TNS   : -51.212
 
 Type  : Fast 1100mV 85C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -0.858
-TNS   : -1.061
+Slack : -0.682
+TNS   : -1.026
 
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : -0.004
-TNS   : -0.004
+Slack : -0.081
+TNS   : -0.081
 
 Type  : Fast 1100mV 85C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.162
+Slack : 0.164
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'reset'
-Slack : 0.286
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 0.401
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -2.581
-TNS   : -5.161
-
-Type  : Fast 1100mV 85C Model Recovery 'clock'
-Slack : -1.751
-TNS   : -369.885
-
-Type  : Fast 1100mV 85C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -1.155
-TNS   : -33.377
-
-Type  : Fast 1100mV 85C Model Removal 'clock'
-Slack : 0.451
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.987
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 1.188
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'reset'
-Slack : -0.184
-TNS   : -11.749
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.101
-TNS   : -37.245
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.001
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 0.072
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -2.990
-TNS   : -423.166
-
-Type  : Fast 1100mV 0C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -1.795
-TNS   : -48.341
-
-Type  : Fast 1100mV 0C Model Setup 'reset'
-Slack : -1.596
-TNS   : -39.884
-
-Type  : Fast 1100mV 0C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -0.815
-TNS   : -0.945
-
-Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : -0.211
-TNS   : -0.440
-
-Type  : Fast 1100mV 0C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.148
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'reset'
-Slack : 0.344
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 0.359
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : -2.374
-TNS   : -4.747
-
-Type  : Fast 1100mV 0C Model Recovery 'clock'
-Slack : -1.487
-TNS   : -316.110
-
-Type  : Fast 1100mV 0C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : -1.098
-TNS   : -32.244
-
-Type  : Fast 1100mV 0C Model Removal 'clock'
 Slack : 0.321
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.988
+Type  : Fast 1100mV 85C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : -2.226
+TNS   : -4.438
+
+Type  : Fast 1100mV 85C Model Recovery 'clock'
+Slack : -1.747
+TNS   : -368.309
+
+Type  : Fast 1100mV 85C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : -1.039
+TNS   : -16.952
+
+Type  : Fast 1100mV 85C Model Removal 'clock'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : 0.770
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : 0.848
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'reset'
+Slack : -0.196
+TNS   : -12.457
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : -0.100
+TNS   : -0.180
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.096
+TNS   : -37.566
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : -0.040
+TNS   : -0.316
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -3.049
+TNS   : -451.654
+
+Type  : Fast 1100mV 0C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : -2.160
+TNS   : -42.110
+
+Type  : Fast 1100mV 0C Model Setup 'reset'
+Slack : -1.135
+TNS   : -45.798
+
+Type  : Fast 1100mV 0C Model Setup 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : -0.675
+TNS   : -0.934
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : -0.240
+TNS   : -0.646
+
+Type  : Fast 1100mV 0C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'reset'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
+Slack : -2.046
+TNS   : -4.080
+
+Type  : Fast 1100mV 0C Model Recovery 'clock'
+Slack : -1.490
+TNS   : -311.949
+
+Type  : Fast 1100mV 0C Model Recovery 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : -0.997
+TNS   : -17.195
+
+Type  : Fast 1100mV 0C Model Removal 'clock'
+Slack : 0.332
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 1.085
+Slack : 0.753
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : 0.806
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'reset'
-Slack : -0.145
-TNS   : -8.764
+Slack : -0.154
+TNS   : -9.456
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.099
-TNS   : -38.293
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
-Slack : 0.037
-TNS   : 0.000
+Slack : -0.097
+TNS   : -38.578
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:tick_generator_2s|IQ[0]'
-Slack : 0.096
+Slack : -0.046
+TNS   : -0.067
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'wrapper_df:df|circuito_semana_1:circuito_principal|dataflow:DF|contador_m:TICK_GENERATOR|IQ[0]'
+Slack : 0.006
 TNS   : 0.000
 
 ------------------------------------------------------------
